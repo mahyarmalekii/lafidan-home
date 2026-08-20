@@ -16,7 +16,7 @@ export const Footer = () => {
               <img
                 src="/logo-emblem.png"
                 alt="LH Lafidan Home Logo"
-                className="h-8 w-auto object-contain"
+                className="h-10 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(212,175,55,0.25)]"
               />
               <span>LH Lafidan Home UG</span>
             </div>
