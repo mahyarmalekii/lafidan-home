@@ -12,8 +12,12 @@ export const Footer = () => {
           
           {/* Company Brand & Address */}
           <div>
-            <div className="text-xl font-medium tracking-tight text-white mb-2 flex items-center gap-2">
-              <span className="w-6 h-6 rounded bg-white text-black font-bold text-xs flex items-center justify-center">LH</span>
+            <div className="text-xl font-medium tracking-tight text-white mb-2 flex items-center gap-3">
+              <img
+                src="/logo-emblem.png"
+                alt="LH Lafidan Home Logo"
+                className="h-8 w-auto object-contain"
+              />
               <span>LH Lafidan Home UG</span>
             </div>
             <p className="text-xs text-gray-400 font-mono leading-relaxed">

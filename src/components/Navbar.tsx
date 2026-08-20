@@ -18,15 +18,17 @@ export const Navbar = ({ currentView, onNavigate, onOpenContact }: NavbarProps) 
           onClick={() => onNavigate('home')}
           className="flex items-center gap-3 text-left cursor-pointer group"
         >
-          <div className="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center font-bold text-sm tracking-tighter transition-transform group-hover:scale-105">
-            LH
-          </div>
+          <img
+            src="/logo-emblem.png"
+            alt="LH Lafidan Home Logo"
+            className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]"
+          />
           <div>
-            <div className="text-lg font-medium tracking-tight text-white flex items-center gap-1.5 leading-none">
+            <div className="text-base sm:text-lg font-medium tracking-tight text-white flex items-center gap-1.5 leading-none">
               <span>LH Lafidan Home</span>
             </div>
-            <div className="text-[10px] text-gray-400 font-mono tracking-wider hidden sm:block">
-              BERLIN · INNENAUSBAU & DESIGN
+            <div className="text-[10px] text-gray-400 font-mono tracking-wider hidden sm:block mt-0.5">
+              BAU · INNENAUSBAU · ARCHITEKTUR
             </div>
           </div>
         </button>
