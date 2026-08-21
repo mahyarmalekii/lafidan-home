@@ -37,7 +37,7 @@ export interface ProjectItem {
     tr?: string;
   };
   location: string;
-  category: 'office' | 'villa' | 'architecture' | 'retail' | 'residential' | 'design';
+  category: 'office' | 'villa' | 'architecture' | 'retail' | 'residential' | 'renovation' | 'design';
   categoryLabel: {
     de: string;
     en: string;
@@ -63,6 +63,177 @@ export interface ProjectItem {
 
 export const PROJECTS_DATA: ProjectItem[] = [
   {
+    "id": "berlin-renovation",
+    "title": {
+      "de": "Exklusive Wohnsanierung & Innenausbau Berlin",
+      "en": "Luxury Apartment Renovation & Interior Fit-Out Berlin",
+      "tr": "Lüks Daire Renovasyonu & İç Mekan Yapımı Berlin"
+    },
+    "subtitle": {
+      "de": "Badsanierung, Spachteltechnik Q4, Fliesen & edle Wohnraumveredelung",
+      "en": "Bathroom Remodeling, Q4 Skimming, Luxury Tiling & Interior Refinement",
+      "tr": "Banyo Yenileme, Q4 Alçı Sıva, Seramik & Lüks Mekan Düzenlemesi"
+    },
+    "location": "Berlin-Wilmersdorf & Ku'damm",
+    "category": "renovation",
+    "categoryLabel": {
+      "de": "Wohnen & Sanierung",
+      "en": "Residential & Renovation",
+      "tr": "Konut & Renovasyon"
+    },
+    "year": "2024–2025",
+    "scope": {
+      "de": [
+        "Komplette Wohnungs- & Badsanierung",
+        "Spachtelarbeiten Q1–Q4 & Glättetechnik",
+        "Großformatige Fliesen- & Natursteinverlegung",
+        "Trockenbau, Decken- & Lichtvouten",
+        "Hochwertige Malerarbeiten & Anstriche",
+        "Sanitär- & Badausstattung"
+      ],
+      "en": [
+        "Complete Apartment & Bathroom Renovation",
+        "Master Skimming Q1–Q4 & Fine Plastering",
+        "Large-Format Tiling & Natural Stone Masonry",
+        "Drywall Architecture & Recessed Lighting",
+        "Premium Interior Painting & Finishes",
+        "Turnkey Luxury Sanitary & Bath Fit-Out"
+      ],
+      "tr": [
+        "Komple Daire ve Banyo Renovasyonu",
+        "Q1–Q4 Usta Alçı Sıva ve Yüzey Düzleme",
+        "Büyük Ebat Seramik ve Doğal Taş Uygulaması",
+        "Alçıpan Asma Tavan ve Işık Bantları",
+        "Birinci Sınıf İç Cephe Boya İşleri",
+        "Anahtar Teslim Lüks Banyo İmalatı"
+      ]
+    },
+    "description": {
+      "de": "Umfassende Neugestaltung und Sanierung einer anspruchsvollen Berliner Wohnimmobilie. Das Projekt zeichnet sich durch meisterhafte Fliesen- und Natursteinverlegung in den Bädern, höchste Oberflächengüte durch Q4-Spachtelung, präzise Trockenbau- und Lichtelemente sowie stimmige Farb- und Materialwelten aus.",
+      "en": "Comprehensive transformation and luxury refurbishment of an exclusive Berlin residence. The project highlights master craftsmanship in bathroom tiling and natural stone, perfectionist Q4 surface skimming, architectural drywall and cove lighting, and cohesive high-end finishes.",
+      "tr": "Berlin'de seçkin bir konutun komple yenilenmesi ve iç mekan inşası projesi. Banyolarda kusursuz büyük ebat seramik ve mermer işçiliği, Q4 kalite seviyesinde pürüzsüz alçı sıva, gizli aydınlatmalı asma tavanlar ve uyumlu renk ve malzeme konseptleriyle tamamlanmıştır."
+    },
+    "heroImage": "/projects/berlin-renovation/photo_sample_01.jpeg",
+    "mediaCount": 23,
+    "media": [
+      {
+        "src": "/projects/berlin-renovation/photo_sample_01.jpeg",
+        "type": "image",
+        "filename": "photo_sample_01.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_02.jpeg",
+        "type": "image",
+        "filename": "photo_sample_02.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_03.jpeg",
+        "type": "image",
+        "filename": "photo_sample_03.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_04.jpeg",
+        "type": "image",
+        "filename": "photo_sample_04.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_05.jpeg",
+        "type": "image",
+        "filename": "photo_sample_05.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_06.jpeg",
+        "type": "image",
+        "filename": "photo_sample_06.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_07.jpeg",
+        "type": "image",
+        "filename": "photo_sample_07.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_08.jpeg",
+        "type": "image",
+        "filename": "photo_sample_08.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_09.jpeg",
+        "type": "image",
+        "filename": "photo_sample_09.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_10.jpeg",
+        "type": "image",
+        "filename": "photo_sample_10.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_11.jpeg",
+        "type": "image",
+        "filename": "photo_sample_11.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_12.jpeg",
+        "type": "image",
+        "filename": "photo_sample_12.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_13.jpeg",
+        "type": "image",
+        "filename": "photo_sample_13.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_14.jpeg",
+        "type": "image",
+        "filename": "photo_sample_14.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_15.jpeg",
+        "type": "image",
+        "filename": "photo_sample_15.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_16.jpeg",
+        "type": "image",
+        "filename": "photo_sample_16.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_17.jpeg",
+        "type": "image",
+        "filename": "photo_sample_17.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_18.jpeg",
+        "type": "image",
+        "filename": "photo_sample_18.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_19.jpeg",
+        "type": "image",
+        "filename": "photo_sample_19.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_20.jpeg",
+        "type": "image",
+        "filename": "photo_sample_20.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_21.jpeg",
+        "type": "image",
+        "filename": "photo_sample_21.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_22.jpeg",
+        "type": "image",
+        "filename": "photo_sample_22.jpeg"
+      },
+      {
+        "src": "/projects/berlin-renovation/photo_sample_23.jpeg",
+        "type": "image",
+        "filename": "photo_sample_23.jpeg"
+      }
+    ]
+  },
+  {
     "id": "charlottenburg",
     "title": {
       "de": "Büroausbau Charlottenburg",
@@ -81,7 +252,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "en": "Office & Commercial",
       "tr": "Ofis & Ticari"
     },
-    "client": "Charlotte Tim Berg / Charlottenburg Office Management",
+    "client": "Charlottenburg Office & Business Center",
     "year": "2024–2025",
     "scope": {
       "de": [
@@ -108,15 +279,15 @@ export const PROJECTS_DATA: ProjectItem[] = [
     },
     "testimonial": {
       "quote": {
-        "de": "„LH Lafidan Home hat unseren Büroausbau in Charlottenburg mit herausragender Präzision und erstklassigem Design verwirklicht. Von den perfekten Q4-Spachtelarbeiten bis hin zu den individuellen Wandgestaltungen und maßgefertigten Details – absolut professionell, termintreu und meisterhaft.“",
-        "en": "“LH Lafidan Home realized our office fit-out in Charlottenburg with outstanding precision and world-class design. From flawless Q4 skimming to bespoke wall aesthetics and tailored details – entirely professional, punctual, and masterful.”",
-        "tr": "“LH Lafidan Home, Charlottenburg'daki ofis projemizi olağanüstü bir hassasiyet ve üstün tasarımla tamamladı. Kusursuz Q4 alçı işlerinden özel duvar tasarımlarına kadar her şey tam zamanında ve ustalıkla yapıldı.”"
+        "de": "„Lafidan Bauunternehmen hat unseren Büroausbau in Charlottenburg mit herausragender Präzision und erstklassigem Design verwirklicht. Von den perfekten Q4-Spachtelarbeiten bis hin zu den individuellen Wandgestaltungen und maßgefertigten Details – absolut professionell, termintreu und meisterhaft.“",
+        "en": "“Lafidan Bauunternehmen realized our office fit-out in Charlottenburg with outstanding precision and world-class design. From flawless Q4 skimming to bespoke wall aesthetics and tailored details – entirely professional, punctual, and masterful.”",
+        "tr": "“Lafidan Bauunternehmen, Charlottenburg'daki ofis projemizi olağanüstü bir hassasiyet ve üstün tasarımla tamamladı. Kusursuz Q4 alçı işlerinden özel duvar tasarımlarına kadar her şey tam zamanında ve ustalıkla yapıldı.”"
       },
-      "author": "Charlotte Tim Berg",
+      "author": "Projektleitung Charlottenburg",
       "role": {
-        "de": "Projektleitung Charlottenburg",
-        "en": "Charlottenburg Project Director",
-        "tr": "Charlottenburg Proje Direktörü"
+        "de": "Charlottenburg Gewerbeprojekt",
+        "en": "Charlottenburg Commercial Fit-Out",
+        "tr": "Charlottenburg Ticari Proje"
       }
     },
     "description": {
@@ -127,71 +298,19 @@ export const PROJECTS_DATA: ProjectItem[] = [
     "heroImage": "/projects/charlottenburg/photo_2026-08-20_14.53.54.jpeg",
     "mediaCount": 13,
     "media": [
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.53.54.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.53.54.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.53.59.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.53.59.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.01.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.01.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.02.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.02.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.04.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.04.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.06.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.06.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.09.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.09.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.11.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.11.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.14.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.14.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.21.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.21.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.24.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.24.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.25.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.25.jpeg"
-      },
-      {
-        "src": "/projects/charlottenburg/photo_2026-08-20_14.54.28.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.54.28.jpeg"
-      }
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.53.54.jpeg", "type": "image", "filename": "photo_2026-08-20_14.53.54.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.53.59.jpeg", "type": "image", "filename": "photo_2026-08-20_14.53.59.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.01.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.01.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.02.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.02.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.04.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.04.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.06.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.06.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.09.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.09.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.11.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.11.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.14.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.14.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.21.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.21.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.24.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.24.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.25.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.25.jpeg" },
+      { "src": "/projects/charlottenburg/photo_2026-08-20_14.54.28.jpeg", "type": "image", "filename": "photo_2026-08-20_14.54.28.jpeg" }
     ]
   },
   {
@@ -251,236 +370,52 @@ export const PROJECTS_DATA: ProjectItem[] = [
     "heroImage": "/projects/kladow/photo_2026-08-20_15.06.44.jpeg",
     "mediaCount": 46,
     "media": [
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.44.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.44.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.45.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.45.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.46.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.46.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.47.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.47.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.48.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.48.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.49.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.49.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.50.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.50.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.51.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.51.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.52.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.52.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.53.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.53.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.54.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.54.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.55.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.55.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.56.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.56.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.56_1_.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.56_1_.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.57.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.57.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.58.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.58.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.06.59.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.06.59.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.00.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.00.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.01.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.01.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.02.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.02.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.03.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.03.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.04.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.04.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.05.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.05.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.06.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.06.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.07.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.07.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.08.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.08.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.09.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.09.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.10.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.10.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.11.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.11.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.12.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.12.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.13.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.13.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.14.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.14.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.15.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.15.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.16.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.16.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.17.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.17.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.19.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.19.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.20.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.20.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.21.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.21.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.22.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.22.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.23.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.23.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.24.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.24.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.24_1_.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.24_1_.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.25.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.25.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.26.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.26.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.27.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.27.jpeg"
-      },
-      {
-        "src": "/projects/kladow/photo_2026-08-20_15.07.28.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.07.28.jpeg"
-      }
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.44.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.44.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.45.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.45.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.46.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.46.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.47.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.47.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.48.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.48.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.49.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.49.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.50.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.50.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.51.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.51.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.52.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.52.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.53.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.53.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.54.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.54.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.55.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.55.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.56.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.56.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.56_1_.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.56_1_.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.57.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.57.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.58.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.58.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.06.59.jpeg", "type": "image", "filename": "photo_2026-08-20_15.06.59.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.00.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.00.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.01.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.01.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.02.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.02.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.03.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.03.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.04.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.04.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.05.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.05.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.06.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.06.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.07.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.07.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.08.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.08.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.09.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.09.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.10.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.10.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.11.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.11.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.12.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.12.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.13.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.13.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.14.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.14.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.15.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.15.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.16.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.16.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.17.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.17.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.19.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.19.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.20.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.20.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.21.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.21.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.22.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.22.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.23.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.23.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.24.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.24.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.24_1_.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.24_1_.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.25.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.25.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.26.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.26.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.27.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.27.jpeg" },
+      { "src": "/projects/kladow/photo_2026-08-20_15.07.28.jpeg", "type": "image", "filename": "photo_2026-08-20_15.07.28.jpeg" }
     ]
   },
   {
@@ -537,201 +472,45 @@ export const PROJECTS_DATA: ProjectItem[] = [
     "heroImage": "/projects/winter-garden/photo_2026-08-20_15.04.53.jpeg",
     "mediaCount": 39,
     "media": [
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.04.53.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.04.53.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.04.55.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.04.55.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.04.56.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.04.56.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.04.57.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.04.57.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.04.59.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.04.59.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.00.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.00.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.01.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.01.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.02.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.02.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.03.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.03.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.05.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.05.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.06.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.06.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.07.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.07.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.08.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.08.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.10.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.10.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.11.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.11.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.12.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.12.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.13.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.13.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.14.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.14.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.15.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.15.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.16.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.16.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.18.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.18.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.19.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.19.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.20.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.20.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.21.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.21.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.22.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.22.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.24.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.24.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.25.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.25.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.26.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.26.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.27.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.27.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.28.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.28.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.29.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.29.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.30.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.30.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.31.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.31.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.32.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.32.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.33.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.33.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.34.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.34.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.35.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.35.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.38.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.38.jpeg"
-      },
-      {
-        "src": "/projects/winter-garden/photo_2026-08-20_15.05.40.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.05.40.jpeg"
-      }
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.04.53.jpeg", "type": "image", "filename": "photo_2026-08-20_15.04.53.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.04.55.jpeg", "type": "image", "filename": "photo_2026-08-20_15.04.55.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.04.56.jpeg", "type": "image", "filename": "photo_2026-08-20_15.04.56.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.04.57.jpeg", "type": "image", "filename": "photo_2026-08-20_15.04.57.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.04.59.jpeg", "type": "image", "filename": "photo_2026-08-20_15.04.59.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.00.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.00.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.01.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.01.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.02.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.02.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.03.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.03.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.05.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.05.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.06.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.06.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.07.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.07.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.08.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.08.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.10.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.10.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.11.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.11.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.12.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.12.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.13.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.13.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.14.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.14.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.15.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.15.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.16.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.16.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.18.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.18.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.19.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.19.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.20.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.20.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.21.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.21.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.22.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.22.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.24.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.24.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.25.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.25.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.26.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.26.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.27.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.27.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.28.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.28.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.29.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.29.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.30.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.30.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.31.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.31.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.32.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.32.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.33.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.33.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.34.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.34.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.35.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.35.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.38.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.38.jpeg" },
+      { "src": "/projects/winter-garden/photo_2026-08-20_15.05.40.jpeg", "type": "image", "filename": "photo_2026-08-20_15.05.40.jpeg" }
     ]
   },
   {
@@ -781,158 +560,42 @@ export const PROJECTS_DATA: ProjectItem[] = [
       ]
     },
     "description": {
-      "de": "Das Projekt Café Sezai Baklava im Berliner Bezirk Schöneberg ist eines der herausragenden Referenzprojekte von LH Lafidan Home – vollständig realisiert von der ersten Idee bis zur schlüsselfertigen Eröffnung. Mit Liebe zum Detail, erlesenen Materialien und jahrelanger Erfahrung im gewerblichen Ausbau schufen wir ein modernes, warmes und identitätsstarkes Ambiente, in dem Stil, Kunst und Ausführungsqualität perfekt harmonieren.",
-      "en": "The Café Sezai Baklava project in Berlin-Schöneberg is a hallmark turnkey project by LH Lafidan Home, delivered end-to-end from conceptualization to grand opening. With meticulous attention to detail, premium materials, and deep commercial expertise, we crafted an inviting, modern, and identity-defining environment where taste, art, and craft excellence meet.",
-      "tr": "Berlin-Schöneberg'deki Café Sezai Baklava projesi, LH Lafidan Home'un ilk fikirden anahtar teslim açılışa kadar gerçekleştirdiği prestijli projelerden biridir. Detaylara gösterilen özen, seçkin malzemeler ve ticari mekanlardaki tecrübemizle stil, sanat ve işçilik kalitesinin buluştuğu modern ve sıcak bir atmosfer yarattık."
+      "de": "Das Projekt Café Sezai Baklava im Berliner Bezirk Schöneberg ist eines der herausragenden Referenzprojekte von Lafidan Bauunternehmen – vollständig realisiert von der ersten Idee bis zur schlüsselfertigen Eröffnung. Mit Liebe zum Detail, erlesenen Materialien und jahrelanger Erfahrung im gewerblichen Ausbau schufen wir ein modernes, warmes und identitätsstarkes Ambiente, in dem Stil, Kunst und Ausführungsqualität perfekt harmonieren.",
+      "en": "The Café Sezai Baklava project in Berlin-Schöneberg is a hallmark turnkey project by Lafidan Bauunternehmen, delivered end-to-end from conceptualization to grand opening. With meticulous attention to detail, premium materials, and deep commercial expertise, we crafted an inviting, modern, and identity-defining environment where taste, art, and craft excellence meet.",
+      "tr": "Berlin-Schöneberg'deki Café Sezai Baklava projesi, Lafidan Bauunternehmen'in ilk fikirden anahtar teslim açılışa kadar gerçekleştirdiği prestijli projelerden biridir. Detaylara gösterilen özen, seçkin malzemeler ve ticari mekanlardaki tecrübemizle stil, sanat ve işçilik kalitesinin buluştuğu modern ve sıcak bir atmosfer yarattık."
     },
     "heroImage": "/projects/sezai-baklava/photo_2026-08-20_14.55.27.jpeg",
     "mediaCount": 29,
     "media": [
-      {
-        "src": "/projects/sezai-baklava/IMG_3643.MP4",
-        "type": "video",
-        "filename": "IMG_3643.MP4"
-      },
-      {
-        "src": "/projects/sezai-baklava/IMG_3644.MP4",
-        "type": "video",
-        "filename": "IMG_3644.MP4"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.27.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.27.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.29.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.29.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.32.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.32.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.34.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.34.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.24.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.24.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.29.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.29.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.30.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.30.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.31.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.31.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.32.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.32.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.34.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.34.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.35.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.35.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.36.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.36.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.38.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.38.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.39.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.39.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.40.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.40.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.42.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.42.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.43.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.43.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.45.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.45.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.53.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.53.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.55.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.55.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.56.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.56.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.57.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.00.57.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.01.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.01.01.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.02.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.01.02.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.03.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.01.03.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.04.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.01.04.jpeg"
-      },
-      {
-        "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.07.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_15.01.07.jpeg"
-      }
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.27.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.27.jpeg" },
+      { "src": "/projects/sezai-baklava/IMG_3643.MP4", "type": "video", "filename": "IMG_3643.MP4" },
+      { "src": "/projects/sezai-baklava/IMG_3644.MP4", "type": "video", "filename": "IMG_3644.MP4" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.29.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.29.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.32.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.32.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_14.55.34.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.34.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.24.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.24.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.29.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.29.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.30.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.30.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.31.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.31.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.32.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.32.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.34.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.34.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.35.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.35.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.36.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.36.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.38.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.38.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.39.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.39.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.40.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.40.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.42.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.42.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.43.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.43.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.45.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.45.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.53.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.53.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.55.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.55.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.56.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.56.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.00.57.jpeg", "type": "image", "filename": "photo_2026-08-20_15.00.57.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.01.jpeg", "type": "image", "filename": "photo_2026-08-20_15.01.01.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.02.jpeg", "type": "image", "filename": "photo_2026-08-20_15.01.02.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.03.jpeg", "type": "image", "filename": "photo_2026-08-20_15.01.03.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.04.jpeg", "type": "image", "filename": "photo_2026-08-20_15.01.04.jpeg" },
+      { "src": "/projects/sezai-baklava/photo_2026-08-20_15.01.07.jpeg", "type": "image", "filename": "photo_2026-08-20_15.01.07.jpeg" }
     ]
   },
   {
@@ -989,71 +652,19 @@ export const PROJECTS_DATA: ProjectItem[] = [
     "heroImage": "/projects/koepenick/2026-08-20_14.50.12.jpg",
     "mediaCount": 13,
     "media": [
-      {
-        "src": "/projects/koepenick/2026-08-20_14.50.12.jpg",
-        "type": "image",
-        "filename": "2026-08-20_14.50.12.jpg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.35.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.35.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.37.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.37.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.39.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.39.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.40.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.40.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.41.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.41.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.43.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.43.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.44.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.44.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.45.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.45.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.47.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.47.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.48.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.48.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.49.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.49.jpeg"
-      },
-      {
-        "src": "/projects/koepenick/photo_2026-08-20_14.50.51.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.50.51.jpeg"
-      }
+      { "src": "/projects/koepenick/2026-08-20_14.50.12.jpg", "type": "image", "filename": "2026-08-20_14.50.12.jpg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.35.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.35.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.37.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.37.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.39.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.39.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.40.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.40.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.41.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.41.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.43.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.43.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.44.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.44.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.45.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.45.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.47.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.47.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.48.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.48.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.49.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.49.jpeg" },
+      { "src": "/projects/koepenick/photo_2026-08-20_14.50.51.jpeg", "type": "image", "filename": "photo_2026-08-20_14.50.51.jpeg" }
     ]
   },
   {
@@ -1104,26 +715,10 @@ export const PROJECTS_DATA: ProjectItem[] = [
     "heroImage": "/projects/3d-berlin/photo_2026-08-20_14.55.27.jpeg",
     "mediaCount": 4,
     "media": [
-      {
-        "src": "/projects/3d-berlin/photo_2026-08-20_14.55.27.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.27.jpeg"
-      },
-      {
-        "src": "/projects/3d-berlin/photo_2026-08-20_14.55.29.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.29.jpeg"
-      },
-      {
-        "src": "/projects/3d-berlin/photo_2026-08-20_14.55.32.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.32.jpeg"
-      },
-      {
-        "src": "/projects/3d-berlin/photo_2026-08-20_14.55.34.jpeg",
-        "type": "image",
-        "filename": "photo_2026-08-20_14.55.34.jpeg"
-      }
+      { "src": "/projects/3d-berlin/photo_2026-08-20_14.55.27.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.27.jpeg" },
+      { "src": "/projects/3d-berlin/photo_2026-08-20_14.55.29.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.29.jpeg" },
+      { "src": "/projects/3d-berlin/photo_2026-08-20_14.55.32.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.32.jpeg" },
+      { "src": "/projects/3d-berlin/photo_2026-08-20_14.55.34.jpeg", "type": "image", "filename": "photo_2026-08-20_14.55.34.jpeg" }
     ]
   }
 ];

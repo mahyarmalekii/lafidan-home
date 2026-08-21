@@ -5,13 +5,13 @@ export type Language = 'de' | 'en' | 'tr';
 export const translations = {
   de: {
     brand: {
-      name: 'LH Lafidan Home',
-      fullName: 'LH Lafidan Home UG',
+      name: 'Lafidan Bauunternehmen',
+      fullName: 'Lafidan Bauunternehmen UG',
       tagline: 'Bau · Innenausbau · Architektur · Interior Design',
       slogan: 'Von der ersten Idee bis zur fertigen Umsetzung – alles aus einer Hand.'
     },
     contactInfo: {
-      company: 'LH Lafidan Home UG',
+      company: 'Lafidan Bauunternehmen UG',
       representative: 'Fatemeh Eyvazi',
       address: 'Bundesallee 187',
       zipCity: '10717 Berlin',
@@ -44,7 +44,7 @@ export const translations = {
     story: {
       badge: 'Ganzheitliches Leistungskonzept',
       title: 'Von der ersten Idee bis zur fertigen Umsetzung.',
-      p1: 'LH Lafidan Home UG ist ein in Berlin ansässiges Unternehmen für anspruchsvolle Bau-, Innenausbau-, Sanierungs- und Designprojekte. Wir verbinden Planung, Design, handwerkliche Ausführung und Projektkoordination zu einem ganzheitlichen Leistungskonzept.',
+      p1: 'Lafidan Bauunternehmen UG ist ein in Berlin ansässiges Unternehmen für anspruchsvolle Bau-, Innenausbau-, Sanierungs- und Designprojekte. Wir verbinden Planung, Design, handwerkliche Ausführung und Projektkoordination zu einem ganzheitlichen Leistungskonzept.',
       p2: 'Unsere besondere Stärke liegt in der Realisierung hochwertiger und individueller Projekte – von Luxusvillen und exklusiven Wohnimmobilien über Hotels und Restaurants bis hin zu Geschäften, Büros und Gewerbeobjekten.',
       p3: 'Mit langjähriger Erfahrung, einem eingespielten Team und einem hohen Qualitätsanspruch begleiten wir unsere Auftraggeber von der ersten Idee über die Planung und Materialauswahl bis zur fachgerechten Ausführung und Fertigstellung.'
     },
@@ -152,7 +152,7 @@ export const translations = {
       ]
     },
     whyUs: {
-      title: 'Warum LH Lafidan Home?',
+      title: 'Warum Lafidan Bauunternehmen?',
       subtitle: 'Sechs überzeugende Gründe für eine erfolgreiche Zusammenarbeit.',
       pillars: [
         {
@@ -217,8 +217,8 @@ export const translations = {
     },
     charlottenburgTestimonial: {
       title: 'Projekt-Referenz: Büroausbau Charlottenburg',
-      quote: '„LH Lafidan Home hat unseren Büroausbau in Charlottenburg mit herausragender Präzision und erstklassigem Design verwirklicht. Von den perfekten Q4-Spachtelarbeiten bis hin zu den individuellen Wandgestaltungen und maßgefertigten Details – absolut professionell, termintreu und meisterhaft.“',
-      author: 'Charlotte Tim Berg',
+      quote: '„Lafidan Bauunternehmen hat unseren Büroausbau in Charlottenburg mit herausragender Präzision und erstklassigem Design verwirklicht. Von den perfekten Q4-Spachtelarbeiten bis hin zu den individuellen Wandgestaltungen und maßgefertigten Details – absolut professionell, termintreu und meisterhaft.“',
+      author: 'Projektleitung Charlottenburg',
       role: 'Projektleitung & Auftraggeber Charlottenburg'
     },
     process: {
@@ -234,7 +234,7 @@ export const translations = {
     cta: {
       title: 'Ihr Projekt. Unsere Erfahrung.',
       subtitle: 'Sie planen einen Neubau, eine Renovierung oder einen hochwertigen Innenausbau?',
-      desc: 'LH Lafidan Home begleitet Sie von der ersten Idee bis zur fertigen Umsetzung. Planung. Design. Innenausbau. Renovierung. Ausstattung. Alles aus einer Hand.',
+      desc: 'Lafidan Bauunternehmen begleitet Sie von der ersten Idee bis zur fertigen Umsetzung. Planung. Design. Innenausbau. Renovierung. Ausstattung. Alles aus einer Hand.',
       button: 'Jetzt unverbindlich anfragen'
     },
     contactSection: {
@@ -255,20 +255,20 @@ export const translations = {
       legalInfoTitle: 'Unternehmensangaben'
     },
     footer: {
-      rights: 'LH Lafidan Home UG. Alle Rechte vorbehalten.',
+      rights: 'Lafidan Bauunternehmen UG. Alle Rechte vorbehalten.',
       impressum: 'Impressum & Datenschutz',
       taxNote: 'St.-Nr.: 29/418/31172'
     }
   },
   en: {
     brand: {
-      name: 'LH Lafidan Home',
-      fullName: 'LH Lafidan Home UG',
+      name: 'Lafidan Bauunternehmen',
+      fullName: 'Lafidan Bauunternehmen UG',
       tagline: 'Construction · Interior Fit-Out · Architecture · Interior Design',
       slogan: 'From initial concept to turnkey completion – all from a single source.'
     },
     contactInfo: {
-      company: 'LH Lafidan Home UG',
+      company: 'Lafidan Bauunternehmen UG',
       representative: 'Fatemeh Eyvazi',
       address: 'Bundesallee 187',
       zipCity: '10717 Berlin, Germany',
@@ -301,7 +301,7 @@ export const translations = {
     story: {
       badge: 'Holistic Service Concept',
       title: 'From initial concept to turnkey completion.',
-      p1: 'LH Lafidan Home UG is a Berlin-based company specializing in high-end construction, interior fit-out, renovation, and architectural design projects. We integrate planning, design, master craft execution, and turnkey project coordination into a unified service concept.',
+      p1: 'Lafidan Bauunternehmen UG is a Berlin-based company specializing in high-end construction, interior fit-out, renovation, and architectural design projects. We integrate planning, design, master craft execution, and turnkey project coordination into a unified service concept.',
       p2: 'Our key strength lies in realizing prestigious and bespoke projects – from luxury villas and prime private residences to hotels, restaurants, retail flagship stores, and commercial headquarters.',
       p3: 'With years of experience, a synchronized team of master craftsmen, and an uncompromising commitment to quality, we guide our clients through every stage: concept, planning, material selection, precision execution, and final handover.'
     },
@@ -409,7 +409,7 @@ export const translations = {
       ]
     },
     whyUs: {
-      title: 'Why LH Lafidan Home?',
+      title: 'Why Lafidan Bauunternehmen?',
       subtitle: 'Six compelling pillars for a seamless, successful collaboration.',
       pillars: [
         {
@@ -473,8 +473,8 @@ export const translations = {
     },
     charlottenburgTestimonial: {
       title: 'Project Reference: Charlottenburg Office Fit-Out',
-      quote: '“LH Lafidan Home realized our office fit-out in Charlottenburg with outstanding precision and world-class design. From flawless Q4 skimming to bespoke wall aesthetics and tailored details – entirely professional, punctual, and masterful.”',
-      author: 'Charlotte Tim Berg',
+      quote: '“Lafidan Bauunternehmen realized our office fit-out in Charlottenburg with outstanding precision and world-class design. From flawless Q4 skimming to bespoke wall aesthetics and tailored details – entirely professional, punctual, and masterful.”',
+      author: 'Projektleitung Charlottenburg',
       role: 'Project Director & Client, Charlottenburg'
     },
     process: {
@@ -490,7 +490,7 @@ export const translations = {
     cta: {
       title: 'Your Project. Our Expertise.',
       subtitle: 'Are you planning a new build, renovation, or high-end interior fit-out?',
-      desc: 'LH Lafidan Home guides you from the very first spark of inspiration to turnkey completion. Architecture. Design. Fit-out. Renovation. Furnishing. Everything from a single source.',
+      desc: 'Lafidan Bauunternehmen guides you from the very first spark of inspiration to turnkey completion. Architecture. Design. Fit-out. Renovation. Furnishing. Everything from a single source.',
       button: 'Request Free Consultation'
     },
     contactSection: {
@@ -511,20 +511,20 @@ export const translations = {
       legalInfoTitle: 'Company Details'
     },
     footer: {
-      rights: 'LH Lafidan Home UG. All rights reserved.',
+      rights: 'Lafidan Bauunternehmen UG. All rights reserved.',
       impressum: 'Imprint & Privacy',
       taxNote: 'Tax ID: 29/418/31172'
     }
   },
   tr: {
     brand: {
-      name: 'LH Lafidan Home',
-      fullName: 'LH Lafidan Home UG',
+      name: 'Lafidan Bauunternehmen',
+      fullName: 'Lafidan Bauunternehmen UG',
       tagline: 'İnşaat · İç Mekan Tasarımı · Mimarlık · İç Mimarlık',
       slogan: 'İlk fikirden anahtar teslim tamamlanmaya kadar – hepsi tek elden.'
     },
     contactInfo: {
-      company: 'LH Lafidan Home UG',
+      company: 'Lafidan Bauunternehmen UG',
       representative: 'Fatemeh Eyvazi',
       address: 'Bundesallee 187',
       zipCity: '10717 Berlin, Almanya',
@@ -557,7 +557,7 @@ export const translations = {
     story: {
       badge: 'Bütüncül Hizmet Konsepti',
       title: 'İlk fikirden anahtar teslim tamamlanmaya kadar.',
-      p1: 'LH Lafidan Home UG, Berlin merkezli olup lüks inşaat, iç mekan düzenleme, tadilat ve mimari tasarım projelerinde uzmanlaşmış bir kuruluştur. Planlama, tasarım, ustalık ve şantiye yönetimini tek bir çatı altında birleştiriyoruz.',
+      p1: 'Lafidan Bauunternehmen UG, Berlin merkezli olup lüks inşaat, iç mekan düzenleme, tadilat ve mimari tasarım projelerinde uzmanlaşmış bir kuruluştur. Planlama, tasarım, ustalık ve şantiye yönetimini tek bir çatı altında birleştiriyoruz.',
       p2: 'En büyük gücümüz; lüks villalardan seçkin konutlara, otellerden restoranlara, mağaza ve ticari genel merkezlere kadar özel projeleri hayata geçirmektir.',
       p3: 'Yılların tecrübesi, uyumlu usta kadromuz ve tavizsiz kalite anlayışımızla müşterilerimize konseptten anahtar teslimine kadar eşlik ediyoruz.'
     },
@@ -665,7 +665,7 @@ export const translations = {
       ]
     },
     whyUs: {
-      title: 'Neden LH Lafidan Home?',
+      title: 'Neden Lafidan Bauunternehmen?',
       subtitle: 'Kusursuz ve başarılı bir iş birliği için altı güçlü neden.',
       pillars: [
         {
@@ -730,8 +730,8 @@ export const translations = {
     },
     charlottenburgTestimonial: {
       title: 'Proje Referansı: Charlottenburg Ofis Binası',
-      quote: '„LH Lafidan Home, Charlottenburg\'daki ofis projemizi olağanüstü bir hassasiyet ve üstün tasarımla tamamladı. Kusursuz Q4 alçı işlerinden özel duvar tasarımlarına kadar her şey tam zamanında ve ustalıkla yapıldı.“',
-      author: 'Charlotte Tim Berg',
+      quote: '„Lafidan Bauunternehmen, Charlottenburg\'daki ofis projemizi olağanüstü bir hassasiyet ve üstün tasarımla tamamladı. Kusursuz Q4 alçı işlerinden özel duvar tasarımlarına kadar her şey tam zamanında ve ustalıkla yapıldı.“',
+      author: 'Projektleitung Charlottenburg',
       role: 'Proje Direktörü & Müşteri, Charlottenburg'
     },
     process: {
@@ -747,7 +747,7 @@ export const translations = {
     cta: {
       title: 'Sizin Projeniz. Bizim Tecrübemiz.',
       subtitle: 'Yeni bir bina, renovasyon veya lüks iç mekan yapımı mı planlıyorsunuz?',
-      desc: 'LH Lafidan Home ilk fikirden anahtar teslimine kadar yanınızda. Mimarlık. Tasarım. İnce Yapı. Tadilat. Mobilya. Her şey tek elden.',
+      desc: 'Lafidan Bauunternehmen ilk fikirden anahtar teslimine kadar yanınızda. Mimarlık. Tasarım. İnce Yapı. Tadilat. Mobilya. Her şey tek elden.',
       button: 'Hemen Ücretsiz Danışın'
     },
     contactSection: {
@@ -768,7 +768,7 @@ export const translations = {
       legalInfoTitle: 'Şirket Bilgileri'
     },
     footer: {
-      rights: 'LH Lafidan Home UG. Tüm hakları saklıdır.',
+      rights: 'Lafidan Bauunternehmen UG. Tüm hakları saklıdır.',
       impressum: 'Künye & Gizlilik',
       taxNote: 'Vergi No: 29/418/31172'
     }

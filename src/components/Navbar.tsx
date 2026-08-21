@@ -20,15 +20,15 @@ export const Navbar = ({ currentView, onNavigate, onOpenContact }: NavbarProps) 
         >
           <img
             src="/logo-emblem.png"
-            alt="LH Lafidan Home Logo"
+            alt="Lafidan Bauunternehmen Logo"
             className="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.3)]"
           />
           <div>
             <div className="text-base sm:text-lg font-medium tracking-tight text-white flex items-center gap-1.5 leading-none">
-              <span>LH Lafidan Home</span>
+              <span>Lafidan</span>
             </div>
             <div className="text-[10px] text-gray-400 font-mono tracking-wider hidden sm:block mt-0.5">
-              BAU · INNENAUSBAU · ARCHITEKTUR
+              BAUUNTERNEHMEN · BERLIN
             </div>
           </div>
         </button>

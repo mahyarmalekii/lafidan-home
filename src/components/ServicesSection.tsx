@@ -91,7 +91,7 @@ export const ServicesSection = ({ onExploreSamples }: ServicesSectionProps) => {
                   </div>
 
                   <div className="mt-6 pt-4 flex items-center justify-between text-xs font-mono text-gray-400 group-hover:text-white transition-colors">
-                    <span>LH LAFIDAN STANDARD</span>
+                    <span>LAFIDAN STANDARD</span>
                     <span>→</span>
                   </div>
                 </div>

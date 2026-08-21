@@ -40,7 +40,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         </button>
 
         <div className="mb-6">
-          <div className="text-xs font-mono text-gray-400 mb-1">LH LAFIDAN HOME UG</div>
+          <div className="text-xs font-mono text-gray-400 mb-1">LAFIDAN BAUUNTERNEHMEN UG</div>
           <h3 className="text-2xl font-light text-white">
             {t.contactSection.formTitle}
           </h3>

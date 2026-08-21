@@ -15,10 +15,10 @@ export const Footer = () => {
             <div className="text-xl font-medium tracking-tight text-white mb-2 flex items-center gap-3">
               <img
                 src="/logo-emblem.png"
-                alt="LH Lafidan Home Logo"
+                alt="Lafidan Bauunternehmen Logo"
                 className="h-10 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(212,175,55,0.25)]"
               />
-              <span>LH Lafidan Home UG</span>
+              <span>Lafidan Bauunternehmen UG</span>
             </div>
             <p className="text-xs text-gray-400 font-mono leading-relaxed">
               Bundesallee 187, 10717 Berlin • Deutschland<br />
@@ -79,7 +79,7 @@ export const Footer = () => {
               <div>
                 <h4 className="font-semibold text-white">Angaben gemäß § 5 TMG</h4>
                 <p>
-                  LH Lafidan Home UG (haftungsbeschränkt)<br />
+                  Lafidan Bauunternehmen UG (haftungsbeschränkt)<br />
                   Bundesallee 187<br />
                   10717 Berlin<br />
                   Deutschland

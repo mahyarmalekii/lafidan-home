@@ -58,7 +58,7 @@ export const ContactSection = () => {
                 </div>
                 
                 <h3 className="text-2xl font-light text-white mb-1">
-                  LH Lafidan Home UG
+                  Lafidan Bauunternehmen UG
                 </h3>
                 <div className="text-sm text-gray-400 mb-6 font-mono">
                   Geschäftsführung / Ansprechpartner: <span className="text-white">Fatemeh Eyvazi</span>
@@ -155,7 +155,7 @@ export const ContactSection = () => {
                       {t.contactSection.successMessage}
                     </div>
                     <div className="text-xs text-gray-300 font-mono">
-                      LH Lafidan Home Team • 0170 8853978
+                      Lafidan Bauunternehmen Team • 0170 8853978
                     </div>
                   </div>
                 ) : (

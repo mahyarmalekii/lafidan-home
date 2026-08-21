@@ -29,6 +29,7 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
   const categories = useMemo(() => {
     return [
       { id: 'all', label: t.samples.allCategories },
+      { id: 'renovation', label: language === 'de' ? 'Wohnsanierung (Berlin-Wilmersdorf)' : language === 'tr' ? 'Konut Renovasyonu (Berlin-Wilmersdorf)' : 'Apartment Renovation (Wilmersdorf)' },
       { id: 'office', label: language === 'de' ? 'Büro & Gewerbe (Charlottenburg)' : language === 'tr' ? 'Ofis & Ticari (Charlottenburg)' : 'Office & Commercial (Charlottenburg)' },
       { id: 'villa', label: language === 'de' ? 'Luxusvillen (Kladow)' : language === 'tr' ? 'Lüks Villalar (Kladow)' : 'Luxury Villas (Kladow)' },
       { id: 'architecture', label: language === 'de' ? 'Wintergarten & Glasbau' : language === 'tr' ? 'Kış Bahçesi & Cam Sistemleri' : 'Winter Garden & Glazing' },
@@ -102,7 +103,7 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
 
           <FadeIn delay={100}>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-gray-300 mb-4">
-              <span>LH LAFIDAN HOME</span>
+              <span>LAFIDAN BAUUNTERNEHMEN</span>
               <span>•</span>
               <span>PORTFOLIO & SAMPLES</span>
             </div>

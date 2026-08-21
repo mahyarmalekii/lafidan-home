@@ -64,7 +64,7 @@ export const StorySection = () => {
               <ThreeCanvas />
 
               <div className="relative z-10 flex items-center justify-between pointer-events-none">
-                <span className="text-xs font-mono text-gray-300">LH LAFIDAN 3D ARCHITECTURE</span>
+                <span className="text-xs font-mono text-gray-300">LAFIDAN BAUUNTERNEHMEN 3D</span>
                 <span className="px-2.5 py-1 rounded-full bg-white/10 text-[10px] font-mono text-emerald-400 border border-white/10">INTERACTIVE 3D</span>
               </div>
 
