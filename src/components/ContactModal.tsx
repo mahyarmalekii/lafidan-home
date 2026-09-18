@@ -34,6 +34,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         {/* Close Button */}
         <button
           onClick={onClose}
+          aria-label="Close"
           className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white hover:text-black text-white transition-colors cursor-pointer"
         >
           ✕
@@ -45,7 +46,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             {t.contactSection.formTitle}
           </h3>
           <p className="text-gray-400 text-xs mt-1">
-            Fatemeh Eyvazi • Bundesallee 187, 10717 Berlin • 0170 8853978
+            Bundesallee 187, 10717 Berlin • 0170 8853978
           </p>
         </div>
 
