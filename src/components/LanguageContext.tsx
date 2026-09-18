@@ -256,7 +256,8 @@ export const translations = {
     },
     footer: {
       rights: 'Lafidan Bauunternehmen UG. Alle Rechte vorbehalten.',
-      impressum: 'Impressum & Datenschutz',
+      impressum: 'Impressum',
+      privacy: 'Datenschutz',
       taxNote: 'St.-Nr.: 29/418/31172'
     }
   },
@@ -512,7 +513,8 @@ export const translations = {
     },
     footer: {
       rights: 'Lafidan Bauunternehmen UG. All rights reserved.',
-      impressum: 'Imprint & Privacy',
+      impressum: 'Imprint',
+      privacy: 'Privacy Policy',
       taxNote: 'Tax ID: 29/418/31172'
     }
   },
@@ -769,7 +771,8 @@ export const translations = {
     },
     footer: {
       rights: 'Lafidan Bauunternehmen UG. Tüm hakları saklıdır.',
-      impressum: 'Künye & Gizlilik',
+      impressum: 'Künye',
+      privacy: 'Gizlilik Politikası',
       taxNote: 'Vergi No: 29/418/31172'
     }
   }
