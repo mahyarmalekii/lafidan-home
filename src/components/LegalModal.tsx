@@ -349,7 +349,7 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                   <p className="font-medium text-white">Lafidan Bauunternehmen UG (haftungsbeschränkt)</p>
                   <p>Bundesallee 187, 10717 Berlin, Deutschland</p>
-                  <p>Geschäftsführung: Fatemeh Eyvazi</p>
+                  <p>Geschäftsführung: Fatemeh Eyvazi • St.-Nr.: 29/418/31172</p>
                   <p className="font-mono mt-2">
                     E-Mail:{' '}
                     <a href="mailto:Lafidanug@gmail.com" className="text-white hover:underline">
