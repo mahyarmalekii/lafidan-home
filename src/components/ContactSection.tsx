@@ -57,12 +57,9 @@ export const ContactSection = () => {
                   {t.contactSection.legalInfoTitle}
                 </div>
                 
-                <h3 className="text-2xl font-light text-white mb-1">
+                <h3 className="text-2xl font-light text-white mb-6">
                   Lafidan Bauunternehmen UG
                 </h3>
-                <div className="text-sm text-gray-400 mb-6 font-mono">
-                  Geschäftsführung / Ansprechpartner: <span className="text-white">Fatemeh Eyvazi</span>
-                </div>
 
                 {/* Info List */}
                 <div className="flex flex-col gap-4 text-sm text-gray-300">
@@ -99,16 +96,6 @@ export const ContactSection = () => {
                       <a href="mailto:Lafidanug@gmail.com" className="text-white hover:underline font-mono">
                         Lafidanug@gmail.com
                       </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 text-white">
-                      📄
-                    </div>
-                    <div>
-                      <div className="font-medium text-white">Steuernummer</div>
-                      <div className="text-gray-400 font-mono">29 / 418 / 31172</div>
                     </div>
                   </div>
                 </div>
