@@ -22,8 +22,7 @@ export const Footer = ({ onOpenLegal }: FooterProps) => {
             <span>Lafidan Bauunternehmen UG</span>
           </div>
           <p className="text-xs text-gray-400 font-mono leading-relaxed">
-            Bundesallee 187, 10717 Berlin • Deutschland<br />
-            Geschäftsführung: Fatemeh Eyvazi • St.-Nr.: 29/418/31172
+            Bundesallee 187, 10717 Berlin • Deutschland
           </p>
         </div>
 
