@@ -13,6 +13,7 @@ import { ContactSection } from './components/ContactSection';
 import { ContactModal } from './components/ContactModal';
 import { SamplesPage } from './components/SamplesPage';
 import { Footer } from './components/Footer';
+import { LegalModal } from './components/LegalModal';
 import { LanguageProvider, useLanguage } from './components/LanguageContext';
 
 function AppContent() {
@@ -20,6 +21,10 @@ function AppContent() {
   const [currentView, setCurrentView] = useState<'home' | 'samples'>('home');
   const [initialProjectId, setInitialProjectId] = useState<string | null>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [legalModal, setLegalModal] = useState<{ isOpen: boolean; tab: 'impressum' | 'privacy' }>({
+    isOpen: false,
+    tab: 'impressum'
+  });
 
   // Sync hash routing
   useEffect(() => {
@@ -29,6 +34,10 @@ function AppContent() {
         setCurrentView('samples');
         const proj = hash.split('/')[1];
         if (proj) setInitialProjectId(proj);
+      } else if (hash === 'impressum') {
+        setLegalModal({ isOpen: true, tab: 'impressum' });
+      } else if (hash === 'datenschutz' || hash === 'privacy') {
+        setLegalModal({ isOpen: true, tab: 'privacy' });
       } else {
         setCurrentView('home');
         if (hash) {
@@ -73,6 +82,10 @@ function AppContent() {
     }
     setCurrentView('samples');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleOpenLegal = (tab: 'impressum' | 'privacy') => {
+    setLegalModal({ isOpen: true, tab });
   };
 
   return (
@@ -172,12 +185,19 @@ function AppContent() {
       )}
 
       {/* Footer */}
-      <Footer />
+      <Footer onOpenLegal={handleOpenLegal} />
 
       {/* Global Quick Contact Modal */}
       <ContactModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
+      />
+
+      {/* Comprehensive Impressum & Datenschutz Legal Modal */}
+      <LegalModal
+        isOpen={legalModal.isOpen}
+        initialTab={legalModal.tab}
+        onClose={() => setLegalModal(prev => ({ ...prev, isOpen: false }))}
       />
 
     </div>
