@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { inquiryEmail, emailHelp } from './inquiryEmail';
 import { FadeIn } from './FadeIn';
 import { useLanguage } from './LanguageContext';
 
@@ -13,19 +14,10 @@ export const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    window.location.href = inquiryEmail(formData, t.contactSection, e.currentTarget.querySelector('select')?.selectedOptions[0]?.text);
     setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        projectType: 'innenausbau',
-        message: ''
-      });
-    }, 4000);
   };
 
   return (
@@ -135,25 +127,16 @@ export const ContactSection = () => {
                     : 'Briefly outline your planned project – we will respond within 24 hours.'}
                 </p>
 
-                {isSubmitted ? (
-                  <div className="p-8 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl text-center text-emerald-400 animate-fadeIn">
-                    <div className="text-3xl mb-2">✓</div>
-                    <div className="font-medium text-lg text-white mb-1">
-                      {t.contactSection.successMessage}
-                    </div>
-                    <div className="text-xs text-gray-300 font-mono">
-                      Lafidan Bauunternehmen Team • 0170 8853978
-                    </div>
-                  </div>
-                ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    <p className="text-sm text-gray-300" role={isSubmitted ? 'status' : undefined}>{emailHelp[language]}</p>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.nameLabel} *</label>
+                        <label htmlFor="contact-name" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.nameLabel} *</label>
                         <input
                           type="text"
                           required
+                          id="contact-name" name="name" autoComplete="name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="z.B. Markus Weber"
@@ -162,10 +145,11 @@ export const ContactSection = () => {
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.phoneLabel} *</label>
+                        <label htmlFor="contact-phone" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.phoneLabel} *</label>
                         <input
                           type="tel"
                           required
+                          id="contact-phone" name="phone" autoComplete="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="0170 ..."
@@ -176,10 +160,11 @@ export const ContactSection = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.emailLabel} *</label>
+                        <label htmlFor="contact-email" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.emailLabel} *</label>
                         <input
                           type="email"
                           required
+                          id="contact-email" name="email" autoComplete="email"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="beispiel@domain.de"
@@ -188,8 +173,9 @@ export const ContactSection = () => {
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.projectTypeLabel}</label>
+                        <label htmlFor="contact-projectType" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.projectTypeLabel}</label>
                         <select
+                          id="contact-projectType" name="projectType"
                           value={formData.projectType}
                           onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                           className="w-full bg-[#151515] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors"
@@ -206,11 +192,12 @@ export const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.messageLabel} *</label>
+                      <label htmlFor="contact-message" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.messageLabel} *</label>
                       <textarea
                         required
                         rows={4}
-                        value={formData.message}
+                        id="contact-message" name="message"
+                          value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder={language === 'de' ? 'Projektstandort, gewünschter Zeitraum, Gewerke...' : language === 'tr' ? 'Proje konumu, tahmini süre, talepler...' : 'Project location, estimated timeline, requirements...'}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
@@ -225,7 +212,7 @@ export const ContactSection = () => {
                     </button>
 
                   </form>
-                )}
+
 
               </div>
             </FadeIn>

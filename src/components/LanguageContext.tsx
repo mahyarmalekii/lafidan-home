@@ -250,7 +250,7 @@ export const translations = {
       phoneLabel: 'Ihre Telefonnummer',
       projectTypeLabel: 'Projektart',
       messageLabel: 'Ihre Nachricht / Projektbeschreibung',
-      submitButton: 'Anfrage absenden',
+      submitButton: 'E-Mail vorbereiten',
       successMessage: 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.',
       legalInfoTitle: 'Unternehmensangaben'
     },
@@ -507,7 +507,7 @@ export const translations = {
       phoneLabel: 'Your Phone Number',
       projectTypeLabel: 'Project Type',
       messageLabel: 'Your Message / Project Details',
-      submitButton: 'Submit Inquiry',
+      submitButton: 'Prepare email',
       successMessage: 'Thank you for your inquiry! We will get back to you promptly.',
       legalInfoTitle: 'Company Details'
     },
@@ -765,7 +765,7 @@ export const translations = {
       phoneLabel: 'Telefon Numaranız',
       projectTypeLabel: 'Proje Türü',
       messageLabel: 'Mesajınız / Proje Detayları',
-      submitButton: 'Talebi Gönder',
+      submitButton: 'E-posta hazırla',
       successMessage: 'Talebiniz için teşekkür ederiz! En kısa sürede sizinle iletişime geçeceğiz.',
       legalInfoTitle: 'Şirket Bilgileri'
     },
