@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html {
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
@@ -101,3 +101,32 @@ body {
   background-size: 200% 200%;
   animation: subtleDrift 15s ease infinite;
 }
+
+/* Comfortable reading sizes, including native controls on mobile. */
+body { line-height: 1.65; }
+@layer base {
+  h1, h2, h3 { text-wrap: balance; overflow-wrap: anywhere; }
+  p { text-wrap: pretty; }
+  input, select, textarea, button { font-family: inherit; }
+}
+@layer utilities {
+  .font-light { font-weight: 400; }
+  .text-xs { font-size: 0.875rem; line-height: 1.5; }
+  .text-sm { font-size: 1rem; line-height: 1.6; }
+}
+form input, form select, form textarea { font-size: 1rem; line-height: 1.5; }
+form label { font-family: var(--font-sans); color: #d1d5db; }
+form input::placeholder, form textarea::placeholder { color: #9ca3af; }
+:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+.inquiry-dialog { max-height: 90dvh; overflow-y: auto; }
+
+html[lang="fa"] { --font-sans: 'Vazirmatn', Tahoma, sans-serif; }
+html[lang="fa"] body { font-family: var(--font-sans); line-height: 1.9; }
+html[lang="fa"] .font-mono { font-family: var(--font-sans); }
+html[lang="fa"] [class*="tracking-"] { letter-spacing: normal; }
+html[dir="rtl"] .text-left { text-align: right; }
+html[dir="rtl"] input[type="email"], html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] a[href^="tel:"], html[dir="rtl"] a[href^="mailto:"] { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .inquiry-dialog h3 { padding-inline-end: 2rem; }
+html[dir="rtl"] .inquiry-dialog > button { right: auto; left: 1.5rem; }

@@ -1,8 +1,10 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { persian } from './persian';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
-export type Language = 'de' | 'en' | 'tr';
+export type Language = 'de' | 'en' | 'tr' | 'fa';
 
 export const translations = {
+  fa: persian,
   de: {
     brand: {
       name: 'Lafidan Bauunternehmen',
@@ -250,7 +252,7 @@ export const translations = {
       phoneLabel: 'Ihre Telefonnummer',
       projectTypeLabel: 'Projektart',
       messageLabel: 'Ihre Nachricht / Projektbeschreibung',
-      submitButton: 'Anfrage absenden',
+      submitButton: 'E-Mail vorbereiten',
       successMessage: 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.',
       legalInfoTitle: 'Unternehmensangaben'
     },
@@ -507,7 +509,7 @@ export const translations = {
       phoneLabel: 'Your Phone Number',
       projectTypeLabel: 'Project Type',
       messageLabel: 'Your Message / Project Details',
-      submitButton: 'Submit Inquiry',
+      submitButton: 'Prepare email',
       successMessage: 'Thank you for your inquiry! We will get back to you promptly.',
       legalInfoTitle: 'Company Details'
     },
@@ -765,7 +767,7 @@ export const translations = {
       phoneLabel: 'Telefon Numaranız',
       projectTypeLabel: 'Proje Türü',
       messageLabel: 'Mesajınız / Proje Detayları',
-      submitButton: 'Talebi Gönder',
+      submitButton: 'E-posta hazırla',
       successMessage: 'Talebiniz için teşekkür ederiz! En kısa sürede sizinle iletişime geçeceğiz.',
       legalInfoTitle: 'Şirket Bilgileri'
     },
@@ -791,6 +793,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Default language is German ('de')
   const [language, setLanguage] = useState<Language>("de");
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'fa' ? 'rtl' : 'ltr';
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>

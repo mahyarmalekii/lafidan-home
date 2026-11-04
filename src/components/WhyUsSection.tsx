@@ -12,7 +12,7 @@ export const WhyUsSection = () => {
         <div className="text-center mb-20">
           <FadeIn delay={100}>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-gray-300 mb-4">
-              <span>{language === 'de' ? 'QUALITÄT & ZUVERLÄSSIGKEIT' : language === 'tr' ? 'KALİTE & GÜVENİLİRLİK' : 'QUALITY & RELIABILITY'}</span>
+              <span>{language === 'fa' ? "کیفیت و اعتماد" : language === 'de' ? 'QUALITÄT & ZUVERLÄSSIGKEIT' : language === 'tr' ? 'KALİTE & GÜVENİLİRLİK' : 'QUALITY & RELIABILITY'}</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4">
               {t.whyUs.title}
@@ -47,7 +47,7 @@ export const WhyUsSection = () => {
           <div className="liquid-glass border border-white/10 rounded-3xl p-8 sm:p-12 bg-black/50">
             <div className="max-w-3xl mb-8">
               <span className="text-xs font-mono text-gray-400 uppercase tracking-wider block mb-2">
-                {language === 'de' ? 'PARTNERSCHAFT AUF AUGENHÖHE' : language === 'tr' ? 'GÜVENİLİR İŞ ORTAKLIĞI' : 'TRUSTED PARTNERSHIP'}
+                {language === 'fa' ? "همکاری بر پایه احترام متقابل" : language === 'de' ? 'PARTNERSCHAFT AUF AUGENHÖHE' : language === 'tr' ? 'GÜVENİLİR İŞ ORTAKLIĞI' : 'TRUSTED PARTNERSHIP'}
               </span>
               <h3 className="text-2xl sm:text-3xl font-light text-white mb-3">
                 {t.clients.title}

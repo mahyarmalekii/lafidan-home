@@ -37,6 +37,7 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
   };
 
   const titles = {
+    fa: { title: 'اطلاعات حقوقی و حریم خصوصی', subtitle: 'شفافیت و مسئولیت‌پذیری در برابر مشتریان و همکاران', tabImpressum: 'اطلاعات حقوقی', tabPrivacy: 'حریم خصوصی', badge: 'حقوقی', close: 'بستن', copiedText: 'کپی شد' },
     de: {
       title: 'Rechtliche Angaben & Datenschutz',
       subtitle: 'Transparenz, Verantwortung und rechtliche Sicherheit für unsere Kunden und Partner',
@@ -143,13 +144,13 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               <div className="p-6 rounded-2xl bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'de' ? 'Unternehmen' : language === 'tr' ? 'Şirket Adı' : 'Company'}
+                    {language === 'fa' ? "شرکت" : language === 'de' ? 'Unternehmen' : language === 'tr' ? 'Şirket Adı' : 'Company'}
                   </div>
                   <div className="text-lg font-medium text-white">Lafidan Bauunternehmen UG</div>
                   <div className="text-xs text-gray-400 font-mono mt-0.5">(haftungsbeschränkt)</div>
                   
                   <div className="mt-4 text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'de' ? 'Geschäftsanschrift' : language === 'tr' ? 'Adres' : 'Registered Address'}
+                    {language === 'fa' ? "نشانی شرکت" : language === 'de' ? 'Geschäftsanschrift' : language === 'tr' ? 'Adres' : 'Registered Address'}
                   </div>
                   <div className="text-sm text-gray-200">
                     Bundesallee 187<br />
@@ -160,13 +161,13 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
 
                 <div>
                   <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'de' ? 'Vertreten durch' : language === 'tr' ? 'Temsilci / Yönetici' : 'Represented by'}
+                    {language === 'fa' ? "نماینده شرکت" : language === 'de' ? 'Vertreten durch' : language === 'tr' ? 'Temsilci / Yönetici' : 'Represented by'}
                   </div>
                   <div className="text-base text-white font-medium">Fatemeh Eyvazi</div>
                   <div className="text-xs text-gray-400">Geschäftsführerin / Managing Director</div>
 
                   <div className="mt-4 text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'de' ? 'Steuerliche Angaben' : language === 'tr' ? 'Vergi Bilgileri' : 'Tax Details'}
+                    {language === 'fa' ? "اطلاعات مالیاتی" : language === 'de' ? 'Steuerliche Angaben' : language === 'tr' ? 'Vergi Bilgileri' : 'Tax Details'}
                   </div>
                   <div className="text-sm text-gray-200 font-mono">
                     Steuernummer: 29/418/31172<br />
@@ -179,7 +180,7 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <div className="text-xs font-mono text-gray-400 uppercase">
-                    {language === 'de' ? 'Direkter Kontakt' : language === 'tr' ? 'Doğrudan İletişim' : 'Direct Contact'}
+                    {language === 'fa' ? "تماس مستقیم" : language === 'de' ? 'Direkter Kontakt' : language === 'tr' ? 'Doğrudan İletişim' : 'Direct Contact'}
                   </div>
                   <div className="text-sm text-white mt-1 flex flex-wrap items-center gap-4">
                     <a href="tel:+491708853978" className="hover:text-[#e5c158] transition-colors underline font-mono">
@@ -197,13 +198,13 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                     onClick={() => copyToClipboard('Lafidanug@gmail.com', 'email')}
                     className="px-3 py-1.5 rounded-lg text-xs bg-white/10 hover:bg-white hover:text-black transition-colors cursor-pointer"
                   >
-                    {copied === 'email' ? tUI.copiedText : (language === 'de' ? 'E-Mail kopieren' : language === 'tr' ? 'E-Posta Kopyala' : 'Copy Email')}
+                    {copied === 'email' ? tUI.copiedText : (language === 'fa' ? "کپی ایمیل" : language === 'de' ? 'E-Mail kopieren' : language === 'tr' ? 'E-Posta Kopyala' : 'Copy Email')}
                   </button>
                   <button
                     onClick={() => copyToClipboard('+491708853978', 'phone')}
                     className="px-3 py-1.5 rounded-lg text-xs bg-white/10 hover:bg-white hover:text-black transition-colors cursor-pointer"
                   >
-                    {copied === 'phone' ? tUI.copiedText : (language === 'de' ? 'Telefon kopieren' : language === 'tr' ? 'Telefon Kopyala' : 'Copy Phone')}
+                    {copied === 'phone' ? tUI.copiedText : (language === 'fa' ? "کپی شماره تلفن" : language === 'de' ? 'Telefon kopieren' : language === 'tr' ? 'Telefon Kopyala' : 'Copy Phone')}
                   </button>
                 </div>
               </div>
@@ -213,7 +214,7 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div>
                   <h4 className="text-sm sm:text-base font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                    {language === 'de' ? 'Angaben gemäß § 5 DDG (ehemals TMG)' : language === 'tr' ? 'Alman Dijital Hizmetler Yasası (§ 5 DDG) Uyarınca Bilgiler' : 'Information according to § 5 DDG (German Digital Services Act)'}
+                    {language === 'fa' ? "اطلاعات مطابق ماده ۵ قانون DDG" : language === 'de' ? 'Angaben gemäß § 5 DDG (ehemals TMG)' : language === 'tr' ? 'Alman Dijital Hizmetler Yasası (§ 5 DDG) Uyarınca Bilgiler' : 'Information according to § 5 DDG (German Digital Services Act)'}
                   </h4>
                   <p className="text-gray-300">
                     Lafidan Bauunternehmen UG (haftungsbeschränkt)<br />
@@ -225,10 +226,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div>
                   <h4 className="text-sm sm:text-base font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                    {language === 'de' ? 'Unternehmensgegenstand & Tätigkeitsbereich' : language === 'tr' ? 'Faaliyet Alanı ve Hizmet Kapsamı' : 'Business Scope & Construction Services'}
+                    {language === 'fa' ? "موضوع فعالیت و خدمات شرکت" : language === 'de' ? 'Unternehmensgegenstand & Tätigkeitsbereich' : language === 'tr' ? 'Faaliyet Alanı ve Hizmet Kapsamı' : 'Business Scope & Construction Services'}
                   </h4>
                   <p className="text-gray-300 leading-relaxed">
-                    {language === 'de' ? (
+                    {language === 'fa' ? "اجرای ساخت‌وساز و فضای داخلی، خدمات تخصصی ساختمانی، دیوار خشک، بتونه‌کاری Q1 تا Q4، کاشی و سنگ طبیعی، نقاشی، بازسازی و نوسازی کامل، تحویل آماده استفاده، طراحی معماری و داخلی، تأمین و نصب مبلمان." : language === 'de' ? (
                       'Ausführung von Hoch- und Innenausbauarbeiten, handwerkliche Baudienstleistungen, Trockenbau, hochwertige Spachtelarbeiten der Qualitätsstufen Q1 bis Q4, Fliesen-, Platten- und Natursteinarbeiten, Maler- und Lackierarbeiten, Komplettsanierung, energetische und bauliche Modernisierung, schlüsselfertige Übergabe, Architektur- und Innenarchitekturplanung, Möbelbeschaffung sowie fachgerechte Montage.'
                     ) : language === 'tr' ? (
                       'İnşaat, anahtar teslim iç mekan tadilatı, alçıpan ve bölme duvar sistemleri, Q1–Q4 kalite seviyelerinde macun ve sıva işleri, boya ve badana, seramik, fayans ve doğal taş kaplama, komple bina renovasyonu ve modernizasyon, mimari ve iç mimari proje tasarımı, mobilya tedarik ve montaj hizmetleri.'
@@ -241,7 +242,7 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div>
                   <h4 className="text-sm sm:text-base font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                    {language === 'de' ? 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV' : language === 'tr' ? 'İçerikten Sorumlu Kişi (§ 18 Abs. 2 MStV)' : 'Responsible for Editorial Content (§ 18 Para. 2 MStV)'}
+                    {language === 'fa' ? "مسئول محتوا طبق بند ۲ ماده ۱۸ MStV" : language === 'de' ? 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV' : language === 'tr' ? 'İçerikten Sorumlu Kişi (§ 18 Abs. 2 MStV)' : 'Responsible for Editorial Content (§ 18 Para. 2 MStV)'}
                   </h4>
                   <p className="text-gray-300">
                     Fatemeh Eyvazi<br />
@@ -252,10 +253,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div>
                   <h4 className="text-sm sm:text-base font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                    {language === 'de' ? 'EU-Streitschlichtung & Verbraucherstreitbeilegung' : language === 'tr' ? 'Tüketici Uyuşmazlık Çözümü' : 'Dispute Resolution'}
+                    {language === 'fa' ? "حل اختلافات مصرف‌کنندگان" : language === 'de' ? 'EU-Streitschlichtung & Verbraucherstreitbeilegung' : language === 'tr' ? 'Tüketici Uyuşmazlık Çözümü' : 'Dispute Resolution'}
                   </h4>
                   <div className="text-gray-300 leading-relaxed">
-                    {language === 'de' ? (
+                    {language === 'fa' ? "ما ملزم یا مایل به شرکت در فرایند حل اختلاف نزد هیئت داوری مصرف‌کنندگان نیستیم. نشانی ایمیل شرکت در بالا آمده است." : language === 'de' ? (
                       <div>
                         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
                         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
@@ -287,10 +288,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div>
                   <h4 className="text-sm sm:text-base font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                    {language === 'de' ? 'Haftung für Inhalte und Links' : language === 'tr' ? 'İçerik ve Bağlantı Sorumluluğu' : 'Liability for Content and External Links'}
+                    {language === 'fa' ? "مسئولیت محتوا و پیوندها" : language === 'de' ? 'Haftung für Inhalte und Links' : language === 'tr' ? 'İçerik ve Bağlantı Sorumluluğu' : 'Liability for Content and External Links'}
                   </h4>
                   <p className="text-gray-400 text-xs leading-relaxed">
-                    {language === 'de' ? (
+                    {language === 'fa' ? "به‌عنوان ارائه‌دهنده خدمات، طبق قوانین عمومی مسئول محتوای خود در این صفحات هستیم. الزامی به نظارت بر اطلاعات منتقل‌شده یا ذخیره‌شده اشخاص ثالث نداریم. در صورت اطلاع از تخلف مشخص، محتوای مربوط را بلافاصله حذف می‌کنیم." : language === 'de' ? (
                       'Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.'
                     ) : language === 'tr' ? (
                       'Hizmet sağlayıcı olarak, genel yasalara uygun olarak bu sayfalardaki kendi içeriklerimizden sorumluyuz. Ancak aktarılan veya depolanan üçüncü taraf bilgilerini denetleme yükümlülüğümüz bulunmamaktadır. İhlallerden haberdar olunduğunda ilgili içerikler derhal kaldırılacaktır.'
@@ -303,10 +304,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div>
                   <h4 className="text-sm sm:text-base font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                    {language === 'de' ? 'Urheberrecht' : language === 'tr' ? 'Telif Hakkı' : 'Copyright'}
+                    {language === 'fa' ? "حق نشر" : language === 'de' ? 'Urheberrecht' : language === 'tr' ? 'Telif Hakkı' : 'Copyright'}
                   </h4>
                   <p className="text-gray-400 text-xs leading-relaxed">
-                    {language === 'de' ? (
+                    {language === 'fa' ? "محتوا و آثار منتشرشده در این وب‌سایت مشمول قانون حق نشر آلمان هستند. تکثیر، پردازش یا انتشار خارج از حدود مجاز قانونی، نیازمند موافقت کتبی صاحب اثر است." : language === 'de' ? (
                       'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.'
                     ) : language === 'tr' ? (
                       'Bu sayfalardaki içerikler ve çalışmalar telif hakkı yasalarına tabidir. Çoğaltma, işleme ve her türlü dağıtım hak sahibinin yazılı iznini gerektirir.'
@@ -328,10 +329,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-100">
                 <div className="flex items-center gap-2 font-medium text-emerald-300 text-sm mb-2">
                   <span>🔒</span>
-                  <span>{language === 'de' ? 'Datenschutz auf einen Blick' : language === 'tr' ? 'Bir Bakışta Gizlilik' : 'Privacy at a Glance'}</span>
+                  <span>{language === 'fa' ? "حریم خصوصی در یک نگاه" : language === 'de' ? 'Datenschutz auf einen Blick' : language === 'tr' ? 'Bir Bakışta Gizlilik' : 'Privacy at a Glance'}</span>
                 </div>
                 <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
-                  {language === 'de' ? (
+                  {language === 'fa' ? "داده‌های شخصی شما را محرمانه و مطابق مقررات حفاظت از داده‌ها، از جمله GDPR، BDSG و TDDDG و این سیاست حریم خصوصی پردازش می‌کنیم. داده‌های شما بدون رضایت صریح در اختیار اشخاص ثالث غیرمجاز قرار نمی‌گیرد." : language === 'de' ? (
                     'Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO, BDSG, TDDDG) sowie dieser Datenschutzerklärung. Ihre Daten werden niemals ohne Ihre ausdrückliche Zustimmung an unbefugte Dritte weitergegeben.'
                   ) : language === 'tr' ? (
                     'Kişisel verileriniz gizli tutulmakta ve yürürlükteki veri koruma mevzuatına (GDPR/KVKK) uygun olarak işlenmektedir. Bilgileriniz izniniz olmadan üçüncü kişilerle asla paylaşılmaz.'
@@ -344,7 +345,7 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               {/* Section 1: Responsible Controller */}
               <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
                 <h4 className="text-base font-semibold text-white">
-                  1. {language === 'de' ? 'Verantwortliche Stelle gem. Art. 4 Abs. 7 DSGVO' : language === 'tr' ? 'Veri Sorumlusu (Controller)' : 'Data Controller (Art. 4(7) GDPR)'}
+                  1. {language === 'fa' ? "مسئول پردازش داده طبق بند ۷ ماده ۴ GDPR" : language === 'de' ? 'Verantwortliche Stelle gem. Art. 4 Abs. 7 DSGVO' : language === 'tr' ? 'Veri Sorumlusu (Controller)' : 'Data Controller (Art. 4(7) GDPR)'}
                 </h4>
                 <div className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                   <p className="font-medium text-white">Lafidan Bauunternehmen UG (haftungsbeschränkt)</p>
@@ -366,16 +367,16 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               {/* Section 2: Data Collection on this Website */}
               <div className="space-y-4">
                 <h4 className="text-base font-semibold text-white">
-                  2. {language === 'de' ? 'Datenerfassung auf unserer Website' : language === 'tr' ? 'Web Sitemizde Veri Toplama' : 'Data Collection on Our Website'}
+                  2. {language === 'fa' ? "جمع‌آوری داده در وب‌سایت" : language === 'de' ? 'Datenerfassung auf unserer Website' : language === 'tr' ? 'Web Sitemizde Veri Toplama' : 'Data Collection on Our Website'}
                 </h4>
 
                 {/* Sub-item: Server Log Files */}
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-xs sm:text-sm">
                   <h5 className="font-medium text-white mb-1">
-                    {language === 'de' ? 'Server-Log-Dateien' : language === 'tr' ? 'Sunucu Günlük Dosyaları' : 'Server Log Files'}
+                    {language === 'fa' ? "گزارش‌های فنی سرور" : language === 'de' ? 'Server-Log-Dateien' : language === 'tr' ? 'Sunucu Günlük Dosyaları' : 'Server Log Files'}
                   </h5>
                   <p className="text-gray-300 leading-relaxed">
-                    {language === 'de' ? (
+                    {language === 'fa' ? "هنگام بازدید از وب‌سایت، سرور اطلاعات فنی شامل نوع و نسخه مرورگر، سیستم‌عامل، نشانی صفحه ارجاع‌دهنده، نشانی IP و زمان درخواست را ثبت می‌کند. پردازش طبق بند ۱(و) ماده ۶ GDPR و برای ارائه پایدار و امن وب‌سایت انجام می‌شود." : language === 'de' ? (
                       'Beim Aufrufen unserer Website erfasst der Webserver automatisch technische Daten in Server-Logfiles: Browsertyp und -version, verwendetes Betriebssystem, Referrer URL (die zuvor besuchte Seite), IP-Adresse des anfragenden Rechners sowie Datum und Uhrzeit der Serveranfrage. Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der technisch fehlerfreien Bereitstellung und Stabilität unserer Website.'
                     ) : language === 'tr' ? (
                       'Web sitemizi ziyaret ettiğinizde sunucu otomatik olarak teknik günlük dosyaları toplar: Tarayıcı türü, işletim sistemi, yönlendiren URL, IP adresi ve erişim saati. Bu veriler GDPR Madde 6(1)(f) uyarınca sitemizin teknik güvenliğini sağlamak amacıyla işlenir.'
@@ -388,10 +389,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 {/* Sub-item: Contact Inquiries */}
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-xs sm:text-sm">
                   <h5 className="font-medium text-white mb-1">
-                    {language === 'de' ? 'Kontaktformular & Anfragen per E-Mail / Telefon' : language === 'tr' ? 'İletişim Formu, E-Posta ve Telefon Talepleri' : 'Contact Form & Inquiries via Email / Phone'}
+                    {language === 'fa' ? "فرم تماس و درخواست‌های ایمیلی و تلفنی" : language === 'de' ? 'Kontaktformular & Anfragen per E-Mail / Telefon' : language === 'tr' ? 'İletişim Formu, E-Posta ve Telefon Talepleri' : 'Contact Form & Inquiries via Email / Phone'}
                   </h5>
                   <p className="text-gray-300 leading-relaxed">
-                    {language === 'de' ? (
+                    {language === 'fa' ? "وقتی از طریق ایمیل یا تلفن درخواست می‌فرستید، اطلاعات نام، ایمیل، تلفن، نوع پروژه و پیام برای پاسخ‌گویی و پیگیری ذخیره می‌شوند. مبنای پردازش بندهای ۱(ب) و ۱(و) ماده ۶ GDPR است. داده‌ها تا درخواست حذف یا پایان هدف نگهداری باقی می‌مانند. فرم این سایت ابتدا پیام را در برنامه ایمیل شما آماده می‌کند؛ ارسال با انتخاب شما انجام می‌شود." : language === 'de' ? (
                       'Wenn Sie uns über das Kontaktformular, per E-Mail oder telefonisch Anfragen zukommen lassen, werden Ihre Angaben (Name, E-Mail-Adresse, Telefonnummer, Art des Projekts und Ihre Nachricht) zur Bearbeitung der Anfrage und für etwaige Folgefragen gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO. Die Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern oder der Zweck der Speicherung entfällt.'
                     ) : language === 'tr' ? (
                       'İletişim formu, e-posta veya telefonla tarafımıza ulaştığınızda, paylaştığınız iletişim ve proje bilgileri talebinizin yanıtlanması amacıyla saklanır (GDPR Madde 6(1)(b) ve (f)). Bilgileriniz talep sonlandığında veya yasal saklama süreleri dolduğunda silinir.'
@@ -405,10 +406,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               {/* Section 3: Data Subject Rights (DSGVO) */}
               <div className="space-y-3">
                 <h4 className="text-base font-semibold text-white">
-                  3. {language === 'de' ? 'Ihre Rechte als betroffene Person' : language === 'tr' ? 'İlgili Kişi Haklarınız (GDPR Hakları)' : 'Your Rights as a Data Subject'}
+                  3. {language === 'fa' ? "حقوق شما درباره داده‌های شخصی" : language === 'de' ? 'Ihre Rechte als betroffene Person' : language === 'tr' ? 'İlgili Kişi Haklarınız (GDPR Hakları)' : 'Your Rights as a Data Subject'}
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-300">
-                  {language === 'de' ? (
+                  {language === 'fa' ? "مطابق مقررات جاری حفاظت از داده‌ها، حقوق زیر را دارید:" : language === 'de' ? (
                     'Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:'
                   ) : language === 'tr' ? (
                     'Yasal mevzuat uyarınca dilediğiniz zaman aşağıdaki haklara sahipsiniz:'
@@ -420,37 +421,37 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
                     <div className="font-semibold text-white mb-1">
-                      {language === 'de' ? 'Auskunftsrecht (Art. 15 DSGVO)' : language === 'tr' ? 'Bilgi Edinme (Art. 15)' : 'Access (Art. 15 GDPR)'}
+                      {language === 'fa' ? "حق دسترسی (ماده ۱۵ GDPR)" : language === 'de' ? 'Auskunftsrecht (Art. 15 DSGVO)' : language === 'tr' ? 'Bilgi Edinme (Art. 15)' : 'Access (Art. 15 GDPR)'}
                     </div>
                     <div className="text-gray-400">
-                      {language === 'de' ? 'Kostenlose Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten Daten.' : 'Right to receive information about your stored personal data.'}
+                      {language === 'fa' ? "دریافت رایگان اطلاعات درباره منشأ، دریافت‌کنندگان و هدف نگهداری داده‌ها." : language === 'de' ? 'Kostenlose Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten Daten.' : 'Right to receive information about your stored personal data.'}
                     </div>
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
                     <div className="font-semibold text-white mb-1">
-                      {language === 'de' ? 'Berichtigung (Art. 16 DSGVO)' : language === 'tr' ? 'Düzeltme (Art. 16)' : 'Rectification (Art. 16 GDPR)'}
+                      {language === 'fa' ? "حق اصلاح (ماده ۱۶ GDPR)" : language === 'de' ? 'Berichtigung (Art. 16 DSGVO)' : language === 'tr' ? 'Düzeltme (Art. 16)' : 'Rectification (Art. 16 GDPR)'}
                     </div>
                     <div className="text-gray-400">
-                      {language === 'de' ? 'Recht auf unverzügliche Berichtigung unrichtiger Daten.' : 'Right to obtain without undue delay the rectification of inaccurate data.'}
+                      {language === 'fa' ? "حق اصلاح فوری داده‌های نادرست." : language === 'de' ? 'Recht auf unverzügliche Berichtigung unrichtiger Daten.' : 'Right to obtain without undue delay the rectification of inaccurate data.'}
                     </div>
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
                     <div className="font-semibold text-white mb-1">
-                      {language === 'de' ? 'Löschung (Art. 17 DSGVO)' : language === 'tr' ? 'Silme (Art. 17)' : 'Erasure (Art. 17 GDPR)'}
+                      {language === 'fa' ? "حق حذف (ماده ۱۷ GDPR)" : language === 'de' ? 'Löschung (Art. 17 DSGVO)' : language === 'tr' ? 'Silme (Art. 17)' : 'Erasure (Art. 17 GDPR)'}
                     </div>
                     <div className="text-gray-400">
-                      {language === 'de' ? 'Recht auf Löschung („Recht auf Vergessenwerden“), sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.' : 'Right to request the deletion of your personal data.'}
+                      {language === 'fa' ? "حق درخواست حذف داده‌ها، در صورت نبود الزام قانونی برای نگهداری آن‌ها." : language === 'de' ? 'Recht auf Löschung („Recht auf Vergessenwerden“), sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.' : 'Right to request the deletion of your personal data.'}
                     </div>
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
                     <div className="font-semibold text-white mb-1">
-                      {language === 'de' ? 'Einschränkung & Widerspruch' : language === 'tr' ? 'Kısıtlama & İtiraz' : 'Restriction & Objection'}
+                      {language === 'fa' ? "محدودسازی و اعتراض" : language === 'de' ? 'Einschränkung & Widerspruch' : language === 'tr' ? 'Kısıtlama & İtiraz' : 'Restriction & Objection'}
                     </div>
                     <div className="text-gray-400">
-                      {language === 'de' ? 'Recht auf Einschränkung der Verarbeitung (Art. 18) sowie Widerspruch (Art. 21 DSGVO).' : 'Right to restriction (Art. 18) and objection to processing (Art. 21).'}
+                      {language === 'fa' ? "حق محدودسازی پردازش طبق ماده ۱۸ و اعتراض طبق ماده ۲۱ GDPR." : language === 'de' ? 'Recht auf Einschränkung der Verarbeitung (Art. 18) sowie Widerspruch (Art. 21 DSGVO).' : 'Right to restriction (Art. 18) and objection to processing (Art. 21).'}
                     </div>
                   </div>
                 </div>
@@ -459,10 +460,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               {/* Section 4: Supervisory Authority */}
               <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-2 text-xs sm:text-sm">
                 <h4 className="font-semibold text-white">
-                  4. {language === 'de' ? 'Beschwerderecht bei der zuständigen Aufsichtsbehörde' : language === 'tr' ? 'Denetim Makamına Şikayet Hakkı' : 'Right to Lodge a Complaint with a Supervisory Authority'}
+                  4. {language === 'fa' ? "حق شکایت به نهاد ناظر" : language === 'de' ? 'Beschwerderecht bei der zuständigen Aufsichtsbehörde' : language === 'tr' ? 'Denetim Makamına Şikayet Hakkı' : 'Right to Lodge a Complaint with a Supervisory Authority'}
                 </h4>
                 <div className="text-gray-300 leading-relaxed">
-                  {language === 'de' ? (
+                  {language === 'fa' ? "در صورت نقض GDPR، حق شکایت به نهاد ناظر را دارید. نهاد مربوط: مسئول حفاظت از داده‌ها و آزادی اطلاعات برلین، Alt-Moabit 59-61, 10555 Berlin. وب‌سایت: https://www.datenschutz-berlin.de" : language === 'de' ? (
                     <div>
                       Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu. Die für uns zuständige Landesdatenschutzbehörde ist:<br />
                       <strong className="text-white">Berliner Beauftragte für Datenschutz und Informationsfreiheit</strong><br />
@@ -487,10 +488,10 @@ export const LegalModal = ({ isOpen, initialTab = 'impressum', onClose }: LegalM
               {/* Section 5: Encryption & Security */}
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-xs sm:text-sm">
                 <h4 className="font-semibold text-white mb-1">
-                  5. {language === 'de' ? 'SSL- bzw. TLS-Verschlüsselung' : language === 'tr' ? 'SSL / TLS Şifrelemesi' : 'SSL / TLS Encryption'}
+                  5. {language === 'fa' ? "رمزگذاری SSL / TLS" : language === 'de' ? 'SSL- bzw. TLS-Verschlüsselung' : language === 'tr' ? 'SSL / TLS Şifrelemesi' : 'SSL / TLS Encryption'}
                 </h4>
                 <p className="text-gray-400 text-xs leading-relaxed">
-                  {language === 'de' ? (
+                  {language === 'fa' ? "این وب‌سایت برای امنیت و حفاظت از انتقال اطلاعات محرمانه از رمزگذاری SSL/TLS استفاده می‌کند. اتصال رمزگذاری‌شده با پیشوند https:// و نماد قفل مرورگر مشخص می‌شود." : language === 'de' ? (
                     'Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.'
                   ) : language === 'tr' ? (
                     'Bu site, güvenlik nedenleriyle ve gizli içeriklerin iletimini korumak için SSL/TLS şifrelemesi kullanır.'

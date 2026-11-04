@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { inquiryEmail, emailHelp } from './inquiryEmail';
 import { useLanguage } from './LanguageContext';
 
 interface ContactModalProps {
@@ -18,18 +19,15 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    window.location.href = inquiryEmail(formData, t.contactSection);
     setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      onClose();
-    }, 2500);
   };
 
   return (
     <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="relative w-full max-w-lg liquid-glass border border-white/20 rounded-3xl p-8 bg-[#0a0a0a] shadow-2xl animate-fadeIn">
+      <div className="relative w-full max-w-lg inquiry-dialog liquid-glass border border-white/20 rounded-3xl p-5 sm:p-8 bg-[#0a0a0a] shadow-2xl animate-fadeIn">
         
         {/* Close Button */}
         <button
@@ -50,31 +48,27 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           </p>
         </div>
 
-        {isSubmitted ? (
-          <div className="py-12 text-center text-emerald-400">
-            <div className="text-4xl mb-3">✓</div>
-            <div className="text-lg font-medium text-white mb-1">{t.contactSection.successMessage}</div>
-            <div className="text-xs text-gray-400 font-mono">Wir kontaktieren Sie in Kürze.</div>
-          </div>
-        ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            <p className="text-sm text-gray-300" role={isSubmitted ? 'status' : undefined}>{emailHelp[language]}</p>
             <div>
-              <label className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.nameLabel} *</label>
+              <label htmlFor="inquiry-name" className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.nameLabel} *</label>
               <input
                 type="text"
                 required
+                id="inquiry-name" name="name" autoComplete="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Name"
+                placeholder={language === 'fa' ? 'نام و نام خانوادگی' : 'Name'}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.phoneLabel} *</label>
+              <label htmlFor="inquiry-phone" className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.phoneLabel} *</label>
               <input
                 type="tel"
                 required
+                id="inquiry-phone" name="phone" autoComplete="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="0170 ..."
@@ -83,9 +77,10 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.emailLabel}</label>
+              <label htmlFor="inquiry-email" className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.emailLabel}</label>
               <input
                 type="email"
+                id="inquiry-email" name="email" autoComplete="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="E-Mail"
@@ -94,13 +89,14 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.messageLabel} *</label>
+              <label htmlFor="inquiry-message" className="block text-xs font-mono text-gray-400 mb-1">{t.contactSection.messageLabel} *</label>
               <textarea
                 required
                 rows={3}
+                id="inquiry-message" name="message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder={language === 'de' ? 'Kurze Projektbeschreibung...' : language === 'tr' ? 'Kısa proje özeti...' : 'Brief project description...'}
+                placeholder={language === 'fa' ? "شرح کوتاه پروژه…" : language === 'de' ? 'Kurze Projektbeschreibung...' : language === 'tr' ? 'Kısa proje özeti...' : 'Brief project description...'}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white"
               />
             </div>
@@ -114,12 +110,12 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               </button>
             </div>
 
-            <div className="flex items-center justify-between text-xs text-gray-400 font-mono pt-2">
+            <div className="flex items-center justify-between flex-wrap gap-3 text-xs text-gray-400 font-mono pt-2">
               <a href="tel:+491708853978" className="hover:text-white underline">📞 0170 8853978</a>
               <a href="mailto:Lafidanug@gmail.com" className="hover:text-white underline">✉️ Lafidanug@gmail.com</a>
             </div>
           </form>
-        )}
+
 
       </div>
     </div>

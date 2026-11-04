@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { inquiryEmail, emailHelp } from './inquiryEmail';
 import { FadeIn } from './FadeIn';
 import { useLanguage } from './LanguageContext';
 
@@ -13,19 +14,10 @@ export const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    window.location.href = inquiryEmail(formData, t.contactSection, e.currentTarget.querySelector('select')?.selectedOptions[0]?.text);
     setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        projectType: 'innenausbau',
-        message: ''
-      });
-    }, 4000);
   };
 
   return (
@@ -36,7 +28,7 @@ export const ContactSection = () => {
         <div className="text-center mb-20">
           <FadeIn delay={100}>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-gray-300 mb-4">
-              <span>BERLIN STANDORT & KONTAKT</span>
+              <span>{language === 'fa' ? 'دفتر برلین و تماس' : 'BERLIN STANDORT & KONTAKT'}</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4">
               {t.contactSection.title}
@@ -68,9 +60,9 @@ export const ContactSection = () => {
                       📍
                     </div>
                     <div>
-                      <div className="font-medium text-white">Standort Berlin</div>
+                      <div className="font-medium text-white">{language === 'fa' ? 'دفتر برلین' : 'Standort Berlin'}</div>
                       <div className="text-gray-400">Bundesallee 187, 10717 Berlin</div>
-                      <div className="text-xs text-gray-500 font-mono mt-0.5">Einsatzgebiet: Berlin, Brandenburg & bundesweit</div>
+                      <div className="text-xs text-gray-500 font-mono mt-0.5">{language === 'fa' ? 'محدوده خدمات: برلین، براندنبورگ و سراسر آلمان' : 'Einsatzgebiet: Berlin, Brandenburg & bundesweit'}</div>
                     </div>
                   </div>
 
@@ -79,11 +71,11 @@ export const ContactSection = () => {
                       📞
                     </div>
                     <div>
-                      <div className="font-medium text-white">Telefon / Mobil</div>
+                      <div className="font-medium text-white">{language === 'fa' ? 'تلفن / همراه' : 'Telefon / Mobil'}</div>
                       <a href="tel:+491708853978" className="text-white hover:underline font-mono text-base">
                         0170 8853978
                       </a>
-                      <div className="text-xs text-gray-400">Mo – Sa: 08:00 – 19:00 Uhr</div>
+                      <div className="text-xs text-gray-400">{language === 'fa' ? 'دوشنبه تا شنبه: ۰۸:۰۰ تا ۱۹:۰۰' : 'Mo – Sa: 08:00 – 19:00 Uhr'}</div>
                     </div>
                   </div>
 
@@ -130,42 +122,34 @@ export const ContactSection = () => {
                   {t.contactSection.formTitle}
                 </h3>
                 <p className="text-gray-400 text-sm mb-8">
-                  {language === 'de'
+                  {language === 'fa' ? "پروژه خود را کوتاه شرح دهید؛ ظرف ۲۴ ساعت با شما تماس می‌گیریم." : language === 'de'
                     ? 'Beschreiben Sie kurz Ihr Vorhaben – wir melden uns innerhalb von 24 Stunden bei Ihnen.'
                     : 'Briefly outline your planned project – we will respond within 24 hours.'}
                 </p>
 
-                {isSubmitted ? (
-                  <div className="p-8 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl text-center text-emerald-400 animate-fadeIn">
-                    <div className="text-3xl mb-2">✓</div>
-                    <div className="font-medium text-lg text-white mb-1">
-                      {t.contactSection.successMessage}
-                    </div>
-                    <div className="text-xs text-gray-300 font-mono">
-                      Lafidan Bauunternehmen Team • 0170 8853978
-                    </div>
-                  </div>
-                ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    <p className="text-sm text-gray-300" role={isSubmitted ? 'status' : undefined}>{emailHelp[language]}</p>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.nameLabel} *</label>
+                        <label htmlFor="contact-name" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.nameLabel} *</label>
                         <input
                           type="text"
                           required
+                          id="contact-name" name="name" autoComplete="name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="z.B. Markus Weber"
+                          placeholder={language === 'fa' ? 'نام و نام خانوادگی شما' : 'z.B. Markus Weber'}
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.phoneLabel} *</label>
+                        <label htmlFor="contact-phone" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.phoneLabel} *</label>
                         <input
                           type="tel"
                           required
+                          id="contact-phone" name="phone" autoComplete="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="0170 ..."
@@ -176,10 +160,11 @@ export const ContactSection = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.emailLabel} *</label>
+                        <label htmlFor="contact-email" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.emailLabel} *</label>
                         <input
                           type="email"
                           required
+                          id="contact-email" name="email" autoComplete="email"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="beispiel@domain.de"
@@ -188,31 +173,33 @@ export const ContactSection = () => {
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.projectTypeLabel}</label>
+                        <label htmlFor="contact-projectType" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.projectTypeLabel}</label>
                         <select
+                          id="contact-projectType" name="projectType"
                           value={formData.projectType}
                           onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                           className="w-full bg-[#151515] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors"
                         >
-                          <option value="innenausbau">{language === 'de' ? 'Kompletter Innenausbau' : language === 'tr' ? 'Komple İç Mekan Yapımı' : 'Full Interior Fit-Out'}</option>
-                          <option value="villa">{language === 'de' ? 'Luxusvilla / Wohnimmobilie' : language === 'tr' ? 'Lüks Villa / Konut' : 'Luxury Villa / Residential'}</option>
-                          <option value="office">{language === 'de' ? 'Büroausbau / Gewerbe' : language === 'tr' ? 'Ofis / Ticari Alan' : 'Office Fit-Out / Commercial'}</option>
-                          <option value="hotel">{language === 'de' ? 'Hotel & Gastronomie' : language === 'tr' ? 'Otel & Restoran' : 'Hospitality & Gastronomy'}</option>
-                          <option value="spachtel">{language === 'de' ? 'Spachtel- & Malerarbeiten Q1–Q4' : language === 'tr' ? 'Alçı Sıva & Boya Q1–Q4' : 'Skimming & Painting Q1–Q4'}</option>
-                          <option value="sanierung">{language === 'de' ? 'Sanierung & Renovierung' : language === 'tr' ? 'Tadilat & Renovasyon' : 'Renovation & Refurbishment'}</option>
-                          <option value="sonstiges">{language === 'de' ? 'Sonstiges / Beratung' : language === 'tr' ? 'Diğer / Danışmanlık' : 'Other / Consultation'}</option>
+                          <option value="innenausbau">{language === 'fa' ? "اجرای کامل فضای داخلی" : language === 'de' ? 'Kompletter Innenausbau' : language === 'tr' ? 'Komple İç Mekan Yapımı' : 'Full Interior Fit-Out'}</option>
+                          <option value="villa">{language === 'fa' ? "ویلا / ملک مسکونی" : language === 'de' ? 'Luxusvilla / Wohnimmobilie' : language === 'tr' ? 'Lüks Villa / Konut' : 'Luxury Villa / Residential'}</option>
+                          <option value="office">{language === 'fa' ? "دفتر / فضای تجاری" : language === 'de' ? 'Büroausbau / Gewerbe' : language === 'tr' ? 'Ofis / Ticari Alan' : 'Office Fit-Out / Commercial'}</option>
+                          <option value="hotel">{language === 'fa' ? "هتل و رستوران" : language === 'de' ? 'Hotel & Gastronomie' : language === 'tr' ? 'Otel & Restoran' : 'Hospitality & Gastronomy'}</option>
+                          <option value="spachtel">{language === 'fa' ? "بتونه‌کاری و نقاشی Q1 تا Q4" : language === 'de' ? 'Spachtel- & Malerarbeiten Q1–Q4' : language === 'tr' ? 'Alçı Sıva & Boya Q1–Q4' : 'Skimming & Painting Q1–Q4'}</option>
+                          <option value="sanierung">{language === 'fa' ? "بازسازی و نوسازی" : language === 'de' ? 'Sanierung & Renovierung' : language === 'tr' ? 'Tadilat & Renovasyon' : 'Renovation & Refurbishment'}</option>
+                          <option value="sonstiges">{language === 'fa' ? "سایر موارد / مشاوره" : language === 'de' ? 'Sonstiges / Beratung' : language === 'tr' ? 'Diğer / Danışmanlık' : 'Other / Consultation'}</option>
                         </select>
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.messageLabel} *</label>
+                      <label htmlFor="contact-message" className="block text-xs font-mono text-gray-400 mb-1.5">{t.contactSection.messageLabel} *</label>
                       <textarea
                         required
                         rows={4}
-                        value={formData.message}
+                        id="contact-message" name="message"
+                          value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder={language === 'de' ? 'Projektstandort, gewünschter Zeitraum, Gewerke...' : language === 'tr' ? 'Proje konumu, tahmini süre, talepler...' : 'Project location, estimated timeline, requirements...'}
+                        placeholder={language === 'fa' ? "محل پروژه، زمان‌بندی موردنظر، خدمات موردنیاز…" : language === 'de' ? 'Projektstandort, gewünschter Zeitraum, Gewerke...' : language === 'tr' ? 'Proje konumu, tahmini süre, talepler...' : 'Project location, estimated timeline, requirements...'}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
                       />
                     </div>
@@ -225,7 +212,7 @@ export const ContactSection = () => {
                     </button>
 
                   </form>
-                )}
+
 
               </div>
             </FadeIn>

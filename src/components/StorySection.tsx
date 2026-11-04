@@ -37,19 +37,19 @@ export const StorySection = () => {
             <div>
               <div className="text-2xl sm:text-3xl font-light text-white font-mono">Q1–Q4</div>
               <div className="text-xs text-gray-400 font-sans mt-1">
-                {language === 'de' ? 'Spachtel- & Oberflächengüte' : language === 'tr' ? 'Alçı Sıva & Yüzey Kalitesi' : 'Surface Skimming Standard'}
+                {language === 'fa' ? "کیفیت بتونه‌کاری و پرداخت سطح" : language === 'de' ? 'Spachtel- & Oberflächengüte' : language === 'tr' ? 'Alçı Sıva & Yüzey Kalitesi' : 'Surface Skimming Standard'}
               </div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-light text-white font-mono">100%</div>
               <div className="text-xs text-gray-400 font-sans mt-1">
-                {language === 'de' ? 'Alles aus einer Hand' : language === 'tr' ? 'Tek Elden Teslimat' : 'Turnkey Single-Source'}
+                {language === 'fa' ? "همه خدمات در یک مجموعه" : language === 'de' ? 'Alles aus einer Hand' : language === 'tr' ? 'Tek Elden Teslimat' : 'Turnkey Single-Source'}
               </div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-light text-white font-mono">TR & DE</div>
               <div className="text-xs text-gray-400 font-sans mt-1">
-                {language === 'de' ? 'Direkt-Beschaffung' : language === 'tr' ? 'Doğrudan Üretici Tedariki' : 'Direct Procurement'}
+                {language === 'fa' ? "تأمین مستقیم" : language === 'de' ? 'Direkt-Beschaffung' : language === 'tr' ? 'Doğrudan Üretici Tedariki' : 'Direct Procurement'}
               </div>
             </div>
           </FadeIn>
