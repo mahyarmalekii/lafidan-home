@@ -58,7 +58,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 id="inquiry-name" name="name" autoComplete="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Name"
+                placeholder={language === 'fa' ? 'نام و نام خانوادگی' : 'Name'}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white"
               />
             </div>
@@ -96,7 +96,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 id="inquiry-message" name="message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder={language === 'de' ? 'Kurze Projektbeschreibung...' : language === 'tr' ? 'Kısa proje özeti...' : 'Brief project description...'}
+                placeholder={language === 'fa' ? "شرح کوتاه پروژه…" : language === 'de' ? 'Kurze Projektbeschreibung...' : language === 'tr' ? 'Kısa proje özeti...' : 'Brief project description...'}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-white"
               />
             </div>

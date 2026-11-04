@@ -1,3 +1,4 @@
+import { projectPersian } from './projectPersian';
 // Auto-generated project catalog from public/projects assets
 export interface ProjectMedia {
   src: string;
@@ -7,6 +8,7 @@ export interface ProjectMedia {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
 }
 
@@ -15,12 +17,14 @@ export interface ProjectTestimonial {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
   author: string;
   role: {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
 }
 
@@ -30,11 +34,13 @@ export interface ProjectItem {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
   subtitle: {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
   location: string;
   category: 'office' | 'villa' | 'architecture' | 'retail' | 'residential' | 'renovation' | 'design';
@@ -42,6 +48,7 @@ export interface ProjectItem {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
   client?: string;
   year: string;
@@ -49,11 +56,13 @@ export interface ProjectItem {
     de: string[];
     en: string[];
     tr?: string[];
+    fa?: string[];
   };
   description: {
     de: string;
     en: string;
     tr?: string;
+    fa?: string;
   };
   testimonial?: ProjectTestimonial;
   heroImage: string;
@@ -722,3 +731,18 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ]
   }
 ];
+
+// Keep asset paths and project identifiers shared across all languages.
+for (const project of PROJECTS_DATA) {
+  const fa = projectPersian[project.id];
+  if (!fa) continue;
+  project.title.fa = fa.title;
+  project.subtitle.fa = fa.subtitle;
+  project.description.fa = fa.description;
+  project.categoryLabel.fa = fa.categoryLabel;
+  project.scope.fa = fa.scope;
+  if (project.testimonial) {
+    project.testimonial.quote.fa = '«لافیدان اجرای داخلی دفتر ما در شارلوتنبورگ را با دقت و طراحی عالی انجام داد. از بتونه‌کاری Q4 تا طراحی اختصاصی دیوار و جزئیات سفارشی؛ حرفه‌ای، دقیق و به‌موقع.»';
+    project.testimonial.role.fa = 'پروژه تجاری شارلوتنبورگ';
+  }
+}

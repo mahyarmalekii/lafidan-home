@@ -28,10 +28,15 @@ export const AnimatedHeading = ({
   }, [initialDelay]);
 
   const lines = text.split('\n');
+  const usesJoinedScript = /[\u0600-\u06ff]/.test(text);
 
   return (
     <h1 className={className} style={style}>
       {lines.map((line, lineIndex) => {
+        // Persian letters must stay in one text run to preserve their joins.
+        if (usesJoinedScript) {
+          return <span key={lineIndex} className="block transition-opacity" style={{ opacity: startAnimation ? 1 : 0, transitionDuration: `${transitionDuration}ms` }}>{line}</span>;
+        }
         const lineLength = line.length;
         const words = line.split(' ');
         let currentGlobalCharIndex = 0;

@@ -120,3 +120,13 @@ form input::placeholder, form textarea::placeholder { color: #9ca3af; }
 :focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 
 .inquiry-dialog { max-height: 90dvh; overflow-y: auto; }
+
+html[lang="fa"] { --font-sans: 'Vazirmatn', Tahoma, sans-serif; }
+html[lang="fa"] body { font-family: var(--font-sans); line-height: 1.9; }
+html[lang="fa"] .font-mono { font-family: var(--font-sans); }
+html[lang="fa"] [class*="tracking-"] { letter-spacing: normal; }
+html[dir="rtl"] .text-left { text-align: right; }
+html[dir="rtl"] input[type="email"], html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] a[href^="tel:"], html[dir="rtl"] a[href^="mailto:"] { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .inquiry-dialog h3 { padding-inline-end: 2rem; }
+html[dir="rtl"] .inquiry-dialog > button { right: auto; left: 1.5rem; }

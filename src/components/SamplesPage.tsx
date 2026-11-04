@@ -29,13 +29,13 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
   const categories = useMemo(() => {
     return [
       { id: 'all', label: t.samples.allCategories },
-      { id: 'renovation', label: language === 'de' ? 'Wohnsanierung (Berlin-Wilmersdorf)' : language === 'tr' ? 'Konut Renovasyonu (Berlin-Wilmersdorf)' : 'Apartment Renovation (Wilmersdorf)' },
-      { id: 'office', label: language === 'de' ? 'Büro & Gewerbe (Charlottenburg)' : language === 'tr' ? 'Ofis & Ticari (Charlottenburg)' : 'Office & Commercial (Charlottenburg)' },
-      { id: 'villa', label: language === 'de' ? 'Luxusvillen (Kladow)' : language === 'tr' ? 'Lüks Villalar (Kladow)' : 'Luxury Villas (Kladow)' },
-      { id: 'architecture', label: language === 'de' ? 'Wintergarten & Glasbau' : language === 'tr' ? 'Kış Bahçesi & Cam Sistemleri' : 'Winter Garden & Glazing' },
-      { id: 'retail', label: language === 'de' ? 'Gastronomie & Retail (Sezai Baklava)' : language === 'tr' ? 'Gastronomi & Mağaza (Sezai Baklava)' : 'Gastronomy & Retail (Sezai Baklava)' },
-      { id: 'residential', label: language === 'de' ? 'Sanierung & Wohnen (Köpenick)' : language === 'tr' ? 'Renovasyon & Konut (Köpenick)' : 'Renovation & Living (Köpenick)' },
-      { id: 'design', label: language === 'de' ? '3D Planung & Visualisierung' : language === 'tr' ? '3D Planlama & Modelleme' : '3D Architecture CGI' }
+      { id: 'renovation', label: language === 'fa' ? "بازسازی مسکونی (ویلمرسدورف)" : language === 'de' ? 'Wohnsanierung (Berlin-Wilmersdorf)' : language === 'tr' ? 'Konut Renovasyonu (Berlin-Wilmersdorf)' : 'Apartment Renovation (Wilmersdorf)' },
+      { id: 'office', label: language === 'fa' ? "دفتر و فضای تجاری (شارلوتنبورگ)" : language === 'de' ? 'Büro & Gewerbe (Charlottenburg)' : language === 'tr' ? 'Ofis & Ticari (Charlottenburg)' : 'Office & Commercial (Charlottenburg)' },
+      { id: 'villa', label: language === 'fa' ? "ویلاهای لوکس (کلادو)" : language === 'de' ? 'Luxusvillen (Kladow)' : language === 'tr' ? 'Lüks Villalar (Kladow)' : 'Luxury Villas (Kladow)' },
+      { id: 'architecture', label: language === 'fa' ? "باغ زمستانی و سازه شیشه‌ای" : language === 'de' ? 'Wintergarten & Glasbau' : language === 'tr' ? 'Kış Bahçesi & Cam Sistemleri' : 'Winter Garden & Glazing' },
+      { id: 'retail', label: language === 'fa' ? "رستوران و فروشگاه (Sezai Baklava)" : language === 'de' ? 'Gastronomie & Retail (Sezai Baklava)' : language === 'tr' ? 'Gastronomi & Mağaza (Sezai Baklava)' : 'Gastronomy & Retail (Sezai Baklava)' },
+      { id: 'residential', label: language === 'fa' ? "بازسازی مسکونی (کوپنیک)" : language === 'de' ? 'Sanierung & Wohnen (Köpenick)' : language === 'tr' ? 'Renovasyon & Konut (Köpenick)' : 'Renovation & Living (Köpenick)' },
+      { id: 'design', label: language === 'fa' ? "طراحی و تصویرسازی سه‌بعدی" : language === 'de' ? '3D Planung & Visualisierung' : language === 'tr' ? '3D Planlama & Modelleme' : '3D Architecture CGI' }
     ];
   }, [language, t.samples.allCategories]);
 
@@ -97,7 +97,7 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
               <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              <span>{language === 'de' ? 'Zurück zur Startseite' : language === 'tr' ? 'Ana Sayfaya Dön' : 'Back to Home'}</span>
+              <span>{language === 'fa' ? "بازگشت به خانه" : language === 'de' ? 'Zurück zur Startseite' : language === 'tr' ? 'Ana Sayfaya Dön' : 'Back to Home'}</span>
             </button>
           )}
 
@@ -105,7 +105,7 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-gray-300 mb-4">
               <span>LAFIDAN BAUUNTERNEHMEN</span>
               <span>•</span>
-              <span>PORTFOLIO & SAMPLES</span>
+              <span>{language === 'fa' ? 'پروژه‌ها و نمونه‌کارها' : 'PORTFOLIO & SAMPLES'}</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-light tracking-tight text-white mb-4">
               {t.samples.pageTitle}
@@ -185,7 +185,7 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
                         onClick={onRequestContact}
                         className="liquid-glass border border-white/20 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
                       >
-                        {language === 'de' ? 'Ähnliches Projekt anfragen' : language === 'tr' ? 'Benzer Proje Talebi' : 'Inquire Similar Project'}
+                        {language === 'fa' ? "درخواست پروژه مشابه" : language === 'de' ? 'Ähnliches Projekt anfragen' : language === 'tr' ? 'Benzer Proje Talebi' : 'Inquire Similar Project'}
                       </button>
                     )}
                   </div>
@@ -260,7 +260,7 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
                       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
-                      <span>{project.media.length} {language === 'de' ? 'Medien' : language === 'tr' ? 'Medya' : 'Files'}</span>
+                      <span>{project.media.length} {language === 'fa' ? "تصاویر و ویدئوها" : language === 'de' ? 'Medien' : language === 'tr' ? 'Medya' : 'Files'}</span>
                     </div>
 
                     <div className="absolute bottom-4 left-4 right-4">
@@ -333,10 +333,10 @@ export const SamplesPage = ({ initialProjectId, onNavigateHome, onRequestContact
         <div className="mt-24 text-center">
           <div className="liquid-glass border border-white/10 rounded-3xl p-10 md:p-16 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
-              {language === 'de' ? 'Haben Sie ein konkretes Projekt im Sinn?' : language === 'tr' ? 'Aklınızda somut bir proje mi var?' : 'Do you have a specific project in mind?'}
+              {language === 'fa' ? "پروژه مشخصی در نظر دارید؟" : language === 'de' ? 'Haben Sie ein konkretes Projekt im Sinn?' : language === 'tr' ? 'Aklınızda somut bir proje mi var?' : 'Do you have a specific project in mind?'}
             </h2>
             <p className="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
-              {language === 'de'
+              {language === 'fa' ? "برای پروژه ساخت یا بازسازی شما در برلین و اطراف آن، مشاوره شخصی و بدون تعهد ارائه می‌دهیم." : language === 'de'
                 ? 'Wir beraten Sie persönlich und unverbindlich zu Ihrem Bau- oder Sanierungsvorhaben in Berlin und Umgebung.'
                 : language === 'tr'
                 ? 'Berlin ve çevresindeki inşaat, iç mekan veya renovasyon projeniz için size özel ve ücretsiz danışmanlık sunuyoruz.'

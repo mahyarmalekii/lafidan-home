@@ -1,8 +1,10 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { persian } from './persian';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
-export type Language = 'de' | 'en' | 'tr';
+export type Language = 'de' | 'en' | 'tr' | 'fa';
 
 export const translations = {
+  fa: persian,
   de: {
     brand: {
       name: 'Lafidan Bauunternehmen',
@@ -791,6 +793,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Default language is German ('de')
   const [language, setLanguage] = useState<Language>("de");
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'fa' ? 'rtl' : 'ltr';
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>

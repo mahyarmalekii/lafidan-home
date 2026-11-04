@@ -18,13 +18,13 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
   // Categories list
   const categories = useMemo(() => {
     return [
-      { id: 'all', label: language === 'de' ? 'Alle Projekte (7)' : language === 'tr' ? 'Tüm Projeler (7)' : 'All Projects (7)' },
-      { id: 'renovation', label: language === 'de' ? 'Wohnsanierung (Neu)' : language === 'tr' ? 'Konut Renovasyon (Yeni)' : 'Residential Fit-Out (New)' },
-      { id: 'office', label: language === 'de' ? 'Büroausbau' : language === 'tr' ? 'Ofis Yapımı' : 'Office Fit-Out' },
-      { id: 'villa', label: language === 'de' ? 'Luxusvillen' : language === 'tr' ? 'Lüks Villalar' : 'Luxury Villas' },
-      { id: 'retail', label: language === 'de' ? 'Gastronomie & Retail' : language === 'tr' ? 'Gastronomi & Mağaza' : 'Hospitality & Retail' },
-      { id: 'architecture', label: language === 'de' ? 'Wintergarten & Glas' : language === 'tr' ? 'Kış Bahçesi & Cam' : 'Winter Garden & Glazing' },
-      { id: 'design', label: language === 'de' ? '3D Planung' : language === 'tr' ? '3D Modelleme' : '3D CGI' }
+      { id: 'all', label: language === 'fa' ? "همه پروژه‌ها (۷)" : language === 'de' ? 'Alle Projekte (7)' : language === 'tr' ? 'Tüm Projeler (7)' : 'All Projects (7)' },
+      { id: 'renovation', label: language === 'fa' ? "بازسازی مسکونی (جدید)" : language === 'de' ? 'Wohnsanierung (Neu)' : language === 'tr' ? 'Konut Renovasyon (Yeni)' : 'Residential Fit-Out (New)' },
+      { id: 'office', label: language === 'fa' ? "اجرای دفتر" : language === 'de' ? 'Büroausbau' : language === 'tr' ? 'Ofis Yapımı' : 'Office Fit-Out' },
+      { id: 'villa', label: language === 'fa' ? "ویلاهای لوکس" : language === 'de' ? 'Luxusvillen' : language === 'tr' ? 'Lüks Villalar' : 'Luxury Villas' },
+      { id: 'retail', label: language === 'fa' ? "رستوران و فروشگاه" : language === 'de' ? 'Gastronomie & Retail' : language === 'tr' ? 'Gastronomi & Mağaza' : 'Hospitality & Retail' },
+      { id: 'architecture', label: language === 'fa' ? "باغ زمستانی و شیشه" : language === 'de' ? 'Wintergarten & Glas' : language === 'tr' ? 'Kış Bahçesi & Cam' : 'Winter Garden & Glazing' },
+      { id: 'design', label: language === 'fa' ? "طراحی سه‌بعدی" : language === 'de' ? '3D Planung' : language === 'tr' ? '3D Modelleme' : '3D CGI' }
     ];
   }, [language]);
 
@@ -97,7 +97,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
             <FadeIn delay={100}>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-gray-300 mb-4 border border-white/10">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{language === 'de' ? 'ECHTE PROJEKTE & SAMPLES DIREKT ANSEHEN' : language === 'tr' ? 'GERÇEK PROJELERİ DOĞRUDAN İNCELEYİN' : 'DIRECT LIVE PROJECT SAMPLES & GALLERY'}</span>
+                <span>{language === 'fa' ? "مشاهده پروژه‌ها و نمونه‌کارهای واقعی" : language === 'de' ? 'ECHTE PROJEKTE & SAMPLES DIREKT ANSEHEN' : language === 'tr' ? 'GERÇEK PROJELERİ DOĞRUDAN İNCELEYİN' : 'DIRECT LIVE PROJECT SAMPLES & GALLERY'}</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white mb-3">
                 {t.samples.pageTitle}
@@ -121,7 +121,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
-                <span>{language === 'de' ? 'Projekte' : language === 'tr' ? 'Projeler' : 'Projects'}</span>
+                <span>{language === 'fa' ? "پروژه‌ها" : language === 'de' ? 'Projekte' : language === 'tr' ? 'Projeler' : 'Projects'}</span>
               </button>
               <button
                 onClick={() => setViewMode('grid')}
@@ -132,7 +132,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span>{language === 'de' ? 'Direkte Fotowand' : language === 'tr' ? 'Fotoğraf Galerisi' : 'Photo Stream'}</span>
+                <span>{language === 'fa' ? "گالری تصاویر" : language === 'de' ? 'Direkte Fotowand' : language === 'tr' ? 'Fotoğraf Galerisi' : 'Photo Stream'}</span>
               </button>
             </div>
 
@@ -140,7 +140,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
               onClick={() => onOpenSamples()}
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 px-5 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-md"
             >
-              <span>{language === 'de' ? 'Vollansicht öffnen' : language === 'tr' ? 'Tam Sayfa Aç' : 'Full Page View'}</span>
+              <span>{language === 'fa' ? "نمایش کامل" : language === 'de' ? 'Vollansicht öffnen' : language === 'tr' ? 'Tam Sayfa Aç' : 'Full Page View'}</span>
               <span>→</span>
             </button>
           </FadeIn>
@@ -186,7 +186,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
                     {/* Media Count Badge */}
                     <div className="absolute top-4 right-4 px-3 py-1 bg-black/70 backdrop-blur-md border border-white/10 rounded-full text-xs font-mono text-white flex items-center gap-1.5 shadow-lg">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                      <span>{project.media.length} {language === 'de' ? 'Fotos' : language === 'tr' ? 'Medya' : 'Photos'}</span>
+                      <span>{project.media.length} {language === 'fa' ? "تصاویر" : language === 'de' ? 'Fotos' : language === 'tr' ? 'Medya' : 'Photos'}</span>
                     </div>
 
                     {/* Category & Title on Hero */}
@@ -217,7 +217,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
                       {/* DIRECT MINI-PHOTO THUMBNAIL STRIP */}
                       <div className="mb-4">
                         <div className="text-[10px] font-mono text-gray-400 mb-1.5 flex items-center justify-between">
-                          <span>{language === 'de' ? 'Direkt-Vorschau (Klick für Großansicht):' : language === 'tr' ? 'Hızlı Önizleme:' : 'Direct Preview:'}</span>
+                          <span>{language === 'fa' ? "پیش‌نمایش؛ برای بزرگ‌نمایی کلیک کنید:" : language === 'de' ? 'Direkt-Vorschau (Klick für Großansicht):' : language === 'tr' ? 'Hızlı Önizleme:' : 'Direct Preview:'}</span>
                           <span className="text-white font-semibold">+{project.media.length - 4} mehr</span>
                         </div>
                         <div className="grid grid-cols-4 gap-1.5">
@@ -250,7 +250,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        <span>{language === 'de' ? 'Galerie direkt öffnen' : language === 'tr' ? 'Galeriyi Aç' : 'Open Direct Gallery'}</span>
+                        <span>{language === 'fa' ? "باز کردن گالری" : language === 'de' ? 'Galerie direkt öffnen' : language === 'tr' ? 'Galeriyi Aç' : 'Open Direct Gallery'}</span>
                       </button>
                       <button
                         onClick={() => onOpenSamples(project.id)}
@@ -273,7 +273,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
         {viewMode === 'grid' && (
           <div>
             <div className="text-xs font-mono text-gray-400 mb-6 flex items-center justify-between">
-              <span>{language === 'de' ? 'Klicken Sie auf ein beliebiges Bild, um es hochauflösend zu vergrößern:' : language === 'tr' ? 'Büyütmek için fotoğraflara tıklayın:' : 'Click any photo to open full-resolution zoom:'}</span>
+              <span>{language === 'fa' ? "برای دیدن تصویر با وضوح بالا روی آن کلیک کنید:" : language === 'de' ? 'Klicken Sie auf ein beliebiges Bild, um es hochauflösend zu vergrößern:' : language === 'tr' ? 'Büyütmek için fotoğraflara tıklayın:' : 'Click any photo to open full-resolution zoom:'}</span>
               <span className="text-white">{directSamples.length} Foto-Highlights</span>
             </div>
             
@@ -329,7 +329,7 @@ export const PortfolioSection = ({ onOpenSamples }: PortfolioSectionProps) => {
               onClick={() => onOpenSamples()}
               className="bg-white text-black px-8 py-3.5 rounded-xl text-xs sm:text-sm font-semibold hover:bg-gray-200 transition-colors cursor-pointer shadow-lg whitespace-nowrap"
             >
-              {language === 'de' ? 'Vollständige Projektgalerie öffnen →' : language === 'tr' ? 'Kapsamlı Galeriyi Aç →' : 'Open Complete Project Gallery →'}
+              {language === 'fa' ? "مشاهده گالری کامل پروژه ←" : language === 'de' ? 'Vollständige Projektgalerie öffnen →' : language === 'tr' ? 'Kapsamlı Galeriyi Aç →' : 'Open Complete Project Gallery →'}
             </button>
           </div>
         </FadeIn>
